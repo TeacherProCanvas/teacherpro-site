@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit -m \"$(cat <<''EOF''\nUpdate TeacherPro website with legal documents and branding refinements\n\n- Create Terms of Service page with comprehensive legal terms\n- Update Privacy Policy with new sections: Cookies & Analytics, Website & Subscription Services\n- Add scope clarification that policy applies to both extension and website\n- Add notification about substantial policy changes\n- Update brand colors to official palette (Purple #7E57C2, Blue #00B0FF, Green #43A047, Amber #FFA000)\n- Fix logo to use white text instead of pink gradient\n- Update tagline to \"Smarter tools for smarter teaching!\" across all pages\n- Fix feature descriptions: Discussion Intelligence and Smart Course Scheduling\n- Remove Twitter and GitHub social links from footers\n- Add Terms of Service links to all navigation menus and footers\n- Ensure consistent branding and professional presentation\n\n🧠 Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git merge:*)",
+      "Read(//c/Users/LaDawn/canvas-tools/**)",
+      "Bash(git rm:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nUpdate TeacherPro website with legal documents and branding refinements\n\n- Create Terms of Service page with comprehensive legal terms\n- Update Privacy Policy with new sections: Cookies & Analytics, Website & Subscription Services\n- Add scope clarification that policy applies to both extension and website\n- Add notification about substantial policy changes\n- Update brand colors to official palette (Purple #7E57C2, Blue #00B0FF, Green #43A047, Amber #FFA000)\n- Fix logo to use white text instead of pink gradient\n- Update tagline to \"Smarter tools for smarter teaching!\" across all pages\n- Fix feature descriptions: Discussion Intelligence and Smart Course Scheduling\n- Remove Twitter and GitHub social links from footers\n- Add Terms of Service links to all navigation menus and footers\n- Ensure consistent branding and professional presentation\n- Move website files from TeacherPro_Website_v1 folder to root directory\n\n🧠 Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
