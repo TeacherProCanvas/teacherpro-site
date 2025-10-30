@@ -1,15 +1,24 @@
 /* ===== ROOT VARIABLES ===== */
 :root {
-    --primary: #6d3ba3;
-    --primary-light: #8b5cf6;
-    --primary-dark: #5b21b6;
-    --accent: #ec4899;
-    --success: #10b981;
-    --warning: #f59e0b;
-    --dark-bg: #ffffff;
-    --dark-text: #1f2937;
-    --light-text: #6b7280;
-    --border: #e5e7eb;
+    --primary: #7E57C2;
+    --primary-light: #7E57C2;
+    --primary-dark: #6a4ba8;
+    --primary-purple: #7E57C2;
+    --dark-purple: #6a4ba8;
+    --light-purple: rgba(126, 87, 194, 0.08);
+    --accent: #00B0FF;
+    --accent-blue: #00B0FF;
+    --success: #43A047;
+    --success-green: #43A047;
+    --warning: #FFA000;
+    --warning-amber: #FFA000;
+    --dark-bg: #F5F5F7;
+    --dark-text: #2D2D2D;
+    --light-text: #666666;
+    --text-light: #666666;
+    --text-dark: #2D2D2D;
+    --soft-gray: #F5F5F7;
+    --border: #E0E0E0;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
     --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -18,10 +27,13 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --dark-bg: #0f172a;
-        --dark-text: #f3f4f6;
-        --light-text: #d1d5db;
-        --border: #1e293b;
+        --dark-bg: #1a1a1e;
+        --dark-text: #f0f0f2;
+        --light-text: #b8b8ba;
+        --text-light: #b8b8ba;
+        --text-dark: #f0f0f2;
+        --border: #333339;
+        --light-purple: rgba(126, 87, 194, 0.15);
     }
 }
 
@@ -196,10 +208,7 @@ a:hover {
 }
 
 .logo-text {
-    background: linear-gradient(135deg, var(--primary-light), var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: white;
 }
 
 .nav-links {
