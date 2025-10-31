@@ -1,171 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TeacherPro Help Center - Guides and tools to help you get things done faster in Canvas.">
-    <title>Help Center - TeacherPro</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta name="theme-color" content="#7E57C2">
-    <style>
-        /* Help page layout */
-        .help-hero { padding: 60px 0 20px; background: transparent; }
-        .help-hero h1 { margin-bottom: 10px; }
-        .help-subtitle { color: var(--text-light); max-width: 800px; }
-        .breadcrumbs { margin-top: 10px; color: var(--text-light); font-size: 0.95rem; }
-        .breadcrumbs a { color: var(--primary-light); }
-        .help-layout { padding: 10px 0 60px; }
-        .help-grid { display: grid; grid-template-columns: 260px 1fr; gap: 24px; align-items: start; }
-        @media (max-width: 900px) { .help-grid { grid-template-columns: 1fr; } }
-        .help-sidebar { position: sticky; top: 74px; border: 1px solid var(--border); border-radius: 12px; background: white; overflow: hidden; }
-        @media (prefers-color-scheme: dark) { .help-sidebar { background: #18181b; } }
-        .sidebar-header { font-weight: 700; padding: 14px 16px; border-bottom: 1px solid var(--border); }
-        .sidebar-list { list-style: none; }
-        .sidebar-item { display: block; padding: 12px 16px; color: var(--text-dark); border-bottom: 1px solid var(--border); text-decoration: none; transition: var(--transition); }
-        .sidebar-item:hover { background: var(--light-purple); }
-        .sidebar-item.active { color: var(--primary-purple); font-weight: 700; }`n        .sidebar-item.disabled { opacity: 0.6; pointer-events: none; }
-        .help-content { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
-        @media (prefers-color-scheme: dark) { .help-content { background: #18181b; } }
-        .guide-title { margin-bottom: 10px; }
-        .guide-sections { display: grid; gap: 20px; }
-        .guide-step img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); margin-top: 8px; }
-        .guide-tips { border-top: 1px solid var(--border); padding-top: 12px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TeacherPro Help Center - Guides and tools to help you get things done faster in Canvas.">
+  <title>Help Center - TeacherPro</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#7E57C2">
+  <style>
+    /* Help page layout */
+    .help-hero { padding: 60px 0 20px; background: transparent; }
+    .help-hero h1 { margin-bottom: 10px; }
+    .help-subtitle { color: var(--text-light); max-width: 800px; }
+    .breadcrumbs { margin-top: 10px; color: var(--text-light); font-size: 0.95rem; }
+    .breadcrumbs a { color: var(--primary-light); }
+    .help-layout { padding: 10px 0 60px; }
+    .help-grid { display: grid; grid-template-columns: 260px 1fr; gap: 24px; align-items: start; }
+    @media (max-width: 900px) { .help-grid { grid-template-columns: 1fr; } }
+    .help-sidebar { position: sticky; top: 74px; border: 1px solid var(--border); border-radius: 12px; background: white; overflow: hidden; }
+    @media (prefers-color-scheme: dark) { .help-sidebar { background: #18181b; } }
+    .sidebar-header { font-weight: 700; padding: 14px 16px; border-bottom: 1px solid var(--border); }
+    .sidebar-list { list-style: none; margin: 0; padding: 0; }
+    .sidebar-item { display: block; padding: 12px 16px; color: var(--text-dark); border-bottom: 1px solid var(--border); text-decoration: none; transition: var(--transition); }
+    .sidebar-item:hover { background: var(--light-purple); }
+    .sidebar-item.active { color: var(--primary-purple); font-weight: 700; }
+    .sidebar-item.disabled { opacity: 0.6; pointer-events: none; }
+    .help-content { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    @media (prefers-color-scheme: dark) { .help-content { background: #18181b; } }
+    .guide-title { margin-bottom: 10px; }
+    .guide-sections { display: grid; gap: 20px; }
+    .guide-step img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); margin-top: 8px; }
+    .guide-tips { border-top: 1px solid var(--border); padding-top: 12px; }
+  </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="container navbar-container">
-            <div class="logo">
-                <img src="../TeacherPro Logo White.png" alt="TeacherPro Logo" class="logo-img">
-                <span class="logo-text">TeacherPro</span>
-            </div>
-            <nav class="nav-links">
-                <a href="../index.html#features">Features</a>
-                <a href="../index.html#impact">Impact</a>
-                <a href="../index.html#security">Security</a>
-                <a href="../index.html#pricing">Pricing</a>
-                <a href="../help/">Help</a>
-                <a href="../privacy.html">Privacy</a>
-                <a href="../terms-of-service.html">Terms</a>
-            </nav>
-            <div class="cta-buttons">
-                <a href="https://chromewebstore.google.com/detail/teacherpro-for-canvas/klkacoocpahoomfjibbjljceokkkhpgl" class="btn btn-primary btn-sm">Install Extension</a>
-                <a href="https://store.teacherpro.app/" class="btn btn-secondary btn-sm">Store</a>
-            </div>
+  <header class="navbar">
+    <div class="container navbar-container">
+      <div class="logo">
+        <img src="../TeacherPro Logo White.png" alt="TeacherPro Logo" class="logo-img">
+        <span class="logo-text">TeacherPro</span>
+      </div>
+      <nav class="nav-links">
+        <a href="../index.html#features">Features</a>
+        <a href="../index.html#impact">Impact</a>
+        <a href="../index.html#security">Security</a>
+        <a href="../index.html#pricing">Pricing</a>
+        <a href="../help/">Help</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms-of-service.html">Terms</a>
+      </nav>
+      <div class="cta-buttons">
+        <a href="https://chromewebstore.google.com/detail/teacherpro-for-canvas/klkacoocpahoomfjibbjljceokkkhpgl" class="btn btn-primary btn-sm">Install Extension</a>
+        <a href="https://store.teacherpro.app/" class="btn btn-secondary btn-sm">Store</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="help-hero">
+      <div class="container">
+        <h1>Help Center</h1>
+        <p class="help-subtitle">Quick guides for common TeacherPro tools. We'll keep adding more - expect around 20 tools here.</p>
+        <div class="breadcrumbs">
+          <a href="../index.html">Home</a> / Help
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <section class="help-hero">
-            <div class="container">
-                <h1>Help Center</h1>
-                <p class="help-subtitle">Quick guides for common TeacherPro tools. We'll keep adding more - expect around 20 tools here.</p>
-                <div class="breadcrumbs">
-                    <a href="../index.html">Home</a> / Help
-                </div>
+    <section class="help-layout">
+      <div class="container help-grid">
+        <aside class="help-sidebar">
+          <div class="sidebar-header">Guides</div>
+          <ul class="sidebar-list">
+            <!-- Scheduling Tools -->
+            <li><strong>Scheduling Tools</strong></li>
+            <li><a class="sidebar-item" href="#course-scheduler">Course Scheduler</a></li>
+            <li><a class="sidebar-item disabled" href="#">Add Lock Dates (Coming Soon)</a></li>
+            <li><a class="sidebar-item active" href="#edit-assignments">Edit Assignment Details</a></li>
+            <li><a class="sidebar-item disabled" href="#">Reset Course Assignment Dates (Coming Soon)</a></li>
+            <li><a class="sidebar-item disabled" href="#">Reset This Course's Calendar Entries (Coming Soon)</a></li>
+
+            <!-- Engageli Tools -->
+            <li><strong>Engageli Tools</strong></li>
+            <li><a class="sidebar-item disabled" href="#">Create Engageli Session - This Course (Coming Soon)</a></li>
+            <li><a class="sidebar-item disabled" href="#">Create Engageli Session - Multi-Course (Coming Soon)</a></li>
+            <li><a class="sidebar-item disabled" href="#">Delete Engageli Session - Single-Date (Coming Soon)</a></li>
+            <li><a class="sidebar-item disabled" href="#">Delete Engageli Session - Multi-Dates (Coming Soon)</a></li>
+
+            <!-- Grades & Rubrics -->
+            <li><strong>Grades & Rubrics</strong></li>
+            <li><a class="sidebar-item disabled" href="#">Manage Rubrics (Coming Soon)</a></li>
+            <li><a class="sidebar-item disabled" href="#">Temporary Zeros - This Course (Coming Soon)</a></li>
+            <li><a class="sidebar-item disabled" href="#">Temporary Zeros - Multi-Course (Coming Soon)</a></li>
+
+            <!-- Admin & Other Tools -->
+            <li><strong>Admin & Other Tools</strong></li>
+            <li><a class="sidebar-item disabled" href="#">Announcement Manager (Coming Soon)</a></li>
+            <li><a class="sidebar-item disabled" href="#">Navigation Tab Manager (Coming Soon)</a></li>
+          </ul>
+        </aside>
+
+        <article class="help-content" id="edit-assignments">
+          <h2 class="guide-title">How to Edit Assignments</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <h4>Step 1</h4>
+              <p>Choose your course and click <em>Load Items</em> to import all assignments, quizzes, and discussions.</p>
+              <img src="../Images/HELP_Edit_Assignment_Details/1.gif" alt="Step 1 GIF">
+            </section>
+            <section class="guide-step">
+              <h4>Step 2</h4>
+              <p>Select items using the checkboxes or click <em>Select All</em>. To start over, click <em>Cancel</em>.</p>
+              <img src="../Images/HELP_Edit_Assignment_Details/2.gif" alt="Step 2 GIF">
+            </section>
+            <section class="guide-step">
+              <h4>Step 3</h4>
+              <p>Use the <strong>Bulk Edit</strong> panel to set due dates, lock dates, attempts, submission types, or file restrictions.</p>
+              <img src="../Images/HELP_Edit_Assignment_Details/3.gif" alt="Step 3 GIF">
+            </section>
+            <section class="guide-step">
+              <h4>Step 4</h4>
+              <p>Click <strong>Apply Changes</strong> when done. Use <strong>Filter & Search</strong> to narrow by title or type.</p>
+              <img src="../Images/HELP_Edit_Assignment_Details/4.gif" alt="Step 4 GIF">
+            </section>
+            <div class="guide-tips">
+              <h4>Tips</h4>
+              <ul>
+                <li>For <strong>Search</strong>, enter multiple terms separated by commas (e.g., <code>lab, critical</code>) to match any of those terms.</li>
+                <li>For <strong>Omit</strong>, enter terms you don't want included (e.g., <code>part 1, quiz</code>) and any matching items will be excluded.</li>
+              </ul>
             </div>
-        </section>
+          </div>
+        </article>
 
-        <section class="help-layout">
-            <div class="container help-grid">
-                <aside class="help-sidebar">
-                    <div class="sidebar-header">Guides</div>
-                                        <ul class="sidebar-list">
-                        <li><a class="sidebar-item active" href="#edit-assignments">How to Edit Assignments</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Bulk Grade Entry (Coming Soon)</a></li>
-                        <li><a class="sidebar-item" href="#course-scheduler">How to Use Course Scheduler</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Announcement Manager (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Discussion Management (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Feedback Library (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Rubric Tools (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Attendance Sync (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Quiz Settings Editor (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Assignment Date Shifter (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Module Organizer (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Cross-course Posting (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Student Messaging (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Late Policy Manager (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Section Manager (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Course Duplication (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Syllabus Updater (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">File Restriction Manager (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Due Date Auditor (Coming Soon)</a></li>
-                        <li><a class="sidebar-item disabled" href="#">Gradebook Export/Import (Coming Soon)</a></li>
-                    </ul>
-                </aside>
-
-                <article class="help-content" id="edit-assignments">
-                    <h2 class="guide-title">How to Edit Assignments</h2>
-                    <div class="guide-sections">
-                        <section class="guide-step">
-                            <h4>Step 1</h4>
-                            <p>Choose your course and click <em>Load Items</em> to import all assignments, quizzes, and discussions.</p>
-                            <img src="../Images/HELP_Edit_Assignment_Details/1.gif" alt="Step 1 GIF">
-                        </section>
-                        <section class="guide-step">
-                            <h4>Step 2</h4>
-                            <p>Select items using the checkboxes or click <em>Select All</em>. To start over, click <em>Cancel</em>.</p>
-                            <img src="../Images/HELP_Edit_Assignment_Details/2.gif" alt="Step 2 GIF">
-                        </section>
-                        <section class="guide-step">
-                            <h4>Step 3</h4>
-                            <p>Use the <strong>Bulk Edit</strong> panel to set due dates, lock dates, attempts, submission types, or file restrictions.</p>
-                            <img src="../Images/HELP_Edit_Assignment_Details/3.gif" alt="Step 3 GIF">
-                        </section>
-                        <section class="guide-step">
-                            <h4>Step 4</h4>
-                            <p>Click <strong>Apply Changes</strong> when done. Use <strong>Filter & Search</strong> to narrow by title or type.</p>
-                            <img src="../Images/HELP_Edit_Assignment_Details/4.gif" alt="Step 4 GIF">
-                        </section>
-                        <div class="guide-tips">
-                            <h4>Tips</h4>
-                            <ul>
-                                <li>For <strong>Search</strong>, enter multiple terms separated by commas (e.g., <code>lab, critical</code>) to match any of those terms.</li>
-                                <li>For <strong>Omit</strong>, enter terms you don't want included (e.g., <code>part 1, quiz</code>) and any matching items will be excluded.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                $1                        <section class="guide-step">
-                            <h4>Step 1: Select a Course</h4>
-                            <p>If you have not already, select your course prefix in the "Choose Course" window. This prefix is used to label calendar entries, so make sure it matches your course naming pattern.</p>
-                        </section>
-                        <section class="guide-step">
-                            <h4>Step 2: Enter Dates and Holidays</h4>
-                            <p>Set your Start Date and End Date. In the Holidays / Blackouts box, list any dates you do not want items scheduled (holidays, breaks, grading days). Then choose which weekdays you want assignments placed on (e.g., Monday�Friday).</p>
-                        </section>
-                        <section class="guide-step">
-                            <h4>Step 3: Configure Special Scheduling</h4>
-                            <p>For items like Honors Projects or Capstones, separate them from regular pacing. The first special item is scheduled 15 days after the start date; the last special item is scheduled 2 days before the end date. Remaining special items are distributed evenly between those dates.</p>
-                        </section>
-                        <section class="guide-step">
-                            <h4>Step 4: Save or Reuse Presets</h4>
-                            <p>To reuse settings, give them a name (e.g., Spring 2026 Schedule) and click <em>Save as New Preset</em>. Next time, select the preset to instantly load dates and holidays. To remove a preset, select it and click <em>Delete Selected</em>.</p>
-                        </section>
-                        <section class="guide-step">
-                            <h4>Step 5: Load Course Items</h4>
-                            <p>Click <strong>Load Course Items</strong> to pull in assignments, quizzes, discussions, pages, and links. Use Search Terms (comma-separated, e.g., <code>lab, critical</code>) to include any matching items. Use Omit Terms (e.g., <code>part 1, quiz</code>) to exclude matches. Type Filters can show or hide item types.</p>
-                        </section>
-                        <section class="guide-step">
-                            <h4>Step 6: Manage Items and Toggles</h4>
-                            <p>Select items via the left checkboxes, then use the toggles to Schedule/Unschedule, Publish/Unpublish, or Mark/Unmark as Special Scheduling.</p>
-                        </section>
-                        <section class="guide-step">
-                            <h4>Step 7: Choose How to Schedule</h4>
-                            <p>Choose <strong>Schedule by Module</strong> (group items on the same day) or <strong>Schedule by Item</strong> (spread items across available dates). Scroll to see a draft preview.</p>
-                        </section>
-                        <section class="guide-step">
-                            <h4>Step 8: Adjust Your Schedule</h4>
-                            <p>Drag and drop items between dates, use the arrow buttons to reorder, or edit date inputs to adjust individual dates.</p>
-                        </section>
-                        <section class="guide-step">
-                            <h4>Step 9: Apply Changes</h4>
-                            <p>Click <strong>Apply Changes</strong> to create calendar entries for lesson pages, set due dates for graded items, and assign a default due time of 11:59 PM in your configured timezone (Settings).</p>
-                        </section>$2
-            </div>
-        </section>
-    </main>
+        <article class="help-content" id="course-scheduler">
+          <h2 class="guide-title">How to Use Course Scheduler</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <h4>Step 1: Select a Course</h4>
+              <p>Select your course prefix in the "Choose Course" window. This prefix labels calendar entries, so make sure it matches your course naming pattern.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 2: Enter Dates and Holidays</h4>
+              <p>Set your Start and End Dates. In the Holidays / Blackouts box, list dates you don’t want items scheduled. Then pick which weekdays you want assignments placed on (e.g., Monday–Friday).</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 3: Configure Special Scheduling</h4>
+              <p>For items like Honors Projects or Capstones, separate them from regular pacing. The first special item is 15 days after the start date; the last is 2 days before the end date. Remaining items are distributed evenly.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 4: Save or Reuse Presets</h4>
+              <p>To reuse settings, name them (e.g., “Spring 2026 Schedule”) and click <em>Save as New Preset</em>. To reuse later, select it. To remove, click <em>Delete Selected</em>.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 5: Load Course Items</h4>
+              <p>Click <strong>Load Course Items</strong> to pull assignments, quizzes, discussions, pages, and links. Use Search Terms and Omit Terms to refine what’s shown.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 6: Manage Items and Toggles</h4>
+              <p>Select items with checkboxes, then use toggles to Schedule/Unschedule, Publish/Unpublish, or Mark/Unmark as Special Scheduling.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 7: Choose How to Schedule</h4>
+              <p>Choose <strong>Schedule by Module</strong> (group items) or <strong>Schedule by Item</strong> (spread across available dates). Preview the draft below.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 8: Adjust Your Schedule</h4>
+              <p>Drag and drop items, reorder with arrows, or manually edit date inputs to fine-tune.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 9: Apply Changes</h4>
+              <p>Click <strong>Apply Changes</strong> to create calendar entries and set due dates for graded items, using 11:59 PM as the default due time.</p>
+            </section>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
