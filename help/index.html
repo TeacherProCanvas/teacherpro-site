@@ -33,6 +33,7 @@
     .guide-sections { display: grid; gap: 20px; }
     .guide-step img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); margin-top: 8px; }
     .guide-tips { border-top: 1px solid var(--border); padding-top: 12px; }
+    .guide-step video { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); margin-top: 8px; }
   </style>
 </head>
 <body>
@@ -77,7 +78,7 @@
             <!-- Scheduling Tools -->
             <li><strong>Scheduling Tools</strong></li>
             <li><a class="sidebar-item" href="#course-scheduler">Course Scheduler</a></li>
-            <li><a class="sidebar-item disabled" href="#">Add Lock Dates (Coming Soon)</a></li>
+            <li><a class="sidebar-item" href="#add-lock-dates">Add Lock Dates</a></li>
             <li><a class="sidebar-item active" href="#edit-assignments">Edit Assignment Details</a></li>
             <li><a class="sidebar-item disabled" href="#">Reset Course Assignment Dates (Coming Soon)</a></li>
             <li><a class="sidebar-item disabled" href="#">Reset This Course's Calendar Entries (Coming Soon)</a></li>
@@ -173,6 +174,70 @@
             <section class="guide-step">
               <h4>Step 9: Apply Changes</h4>
               <p>Click <strong>Apply Changes</strong> to create calendar entries and set due dates for graded items, using 11:59 PM as the default due time.</p>
+            </section>
+          </div>
+        </article>
+
+        <article class="help-content" id="add-lock-dates">
+          <h2 class="guide-title">How to Use Add Lock Dates</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <h4>Step 1: Choose Dates</h4>
+              <p>Select a saved preset or enter dates manually. Lock Dates apply to items with due dates in the first range. Course End Lock applies to items in the second range (starting the day after the first ends).</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 2: Understand the Two Ranges</h4>
+              <p><strong>Lock Dates Range:</strong> Items due between your "From" and "To" dates will have a lock date set.</p>
+              <p><strong>Course End Lock Range:</strong> Items due between the auto-filled "From" date and your "To" date will be locked on the specified date (usually the course end date).</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 3: Save as Preset (Optional)</h4>
+              <p>If you want to reuse these dates, give them a name (e.g., "Fall 2025 Dates") and click "Save Preset". Next time, select the preset to load all dates instantly.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 4: Preview Items</h4>
+              <p>Click "Preview" to see all items matching your date ranges. This shows the items that will be locked and lets you filter before applying.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 5: Filter &amp; Select Items</h4>
+              <p>In the preview, you can filter by title, toggle item types (Assignments, Quizzes, Discussions), and sort by clicking column headers. Check the "Apply?" checkbox for each item you want to lock. Use "Select All" or "Deselect All" for quick selection.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 6: Apply Changes</h4>
+              <p>Click "Apply Changes" to set the lock dates in Canvas. You can always come back and adjust more items later.</p>
+            </section>
+            <div class="guide-tips">
+              <h4>Tip</h4>
+              <p>Click the "Quick Tour" button for an interactive walkthrough!</p>
+            </div>
+
+            <section class="guide-step">
+              <h4>Video Walkthrough: Part 1</h4>
+              <video controls preload="metadata">
+                <source src="../Images/Walkthrough - Lock Dates/1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </section>
+            <section class="guide-step">
+              <h4>Video Walkthrough: Part 2</h4>
+              <video controls preload="metadata">
+                <source src="../Images/Walkthrough - Lock Dates/2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </section>
+            <section class="guide-step">
+              <h4>Video Walkthrough: Part 3</h4>
+              <video controls preload="metadata">
+                <source src="../Images/Walkthrough - Lock Dates/3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </section>
+            <section class="guide-step">
+              <h4>Video Walkthrough: Part 4</h4>
+              <video controls preload="metadata">
+                <source src="../Images/Walkthrough - Lock Dates/4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
             </section>
           </div>
         </article>
