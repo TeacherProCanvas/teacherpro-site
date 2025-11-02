@@ -34,6 +34,9 @@
     .guide-step img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); margin-top: 8px; }
     .guide-tips { border-top: 1px solid var(--border); padding-top: 12px; }
     .guide-step video { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); margin-top: 8px; }
+    /* Single-guide view */
+    .help-content.guide { display: none; }
+    .help-content.guide.active { display: block; }
   </style>
 </head>
 <body>
@@ -63,7 +66,7 @@
     <section class="help-hero">
       <div class="container">
         <h1>Help Center</h1>
-        <p class="help-subtitle">Quick guides for common TeacherPro tools. We'll keep adding more - expect around 20 tools here.</p>
+        <p class="help-subtitle"></p>
         <div class="breadcrumbs">
           <a href="../index.html">Home</a> / Help
         </div>
@@ -73,58 +76,52 @@
     <section class="help-layout">
       <div class="container help-grid">
         <aside class="help-sidebar">
-          <div class="sidebar-header">Guides</div>
-          <ul class="sidebar-list">
-            <!-- Scheduling Tools -->
-            <li><strong>Scheduling Tools</strong></li>
-            <li><a class="sidebar-item" href="#course-scheduler">Course Scheduler</a></li>
+          <div class="sidebar-header"></div>
+          <ul class="sidebar-list" id="help-sidebar-list">
+            <li><strong>Getting Started</strong></li>
+            <li><a class="sidebar-item" href="#help-quickstart">Quick Start Guide</a></li>
+
+            <li><strong>Scheduling</strong></li>
+            <li><a class="sidebar-item" href="#auto-scheduler">Course Scheduler</a></li>
             <li><a class="sidebar-item" href="#add-lock-dates">Add Lock Dates</a></li>
-            <li><a class="sidebar-item active" href="#edit-assignments">Edit Assignment Details</a></li>
-            <li><a class="sidebar-item disabled" href="#">Reset Course Assignment Dates (Coming Soon)</a></li>
-            <li><a class="sidebar-item disabled" href="#">Reset This Course's Calendar Entries (Coming Soon)</a></li>
+            <li><a class="sidebar-item" href="#edit-dates">Edit Assignment Details</a></li>
+            <li><a class="sidebar-item" href="#reset-dates">Reset Assignment Dates</a></li>
+            <li><a class="sidebar-item" href="#reset-calendar">Reset Calendar Events</a></li>
 
-            <!-- Engageli Tools -->
-            <li><strong>Engageli Tools</strong></li>
-            <li><a class="sidebar-item disabled" href="#">Create Engageli Session - This Course (Coming Soon)</a></li>
-            <li><a class="sidebar-item disabled" href="#">Create Engageli Session - Multi-Course (Coming Soon)</a></li>
-            <li><a class="sidebar-item disabled" href="#">Delete Engageli Session - Single-Date (Coming Soon)</a></li>
-            <li><a class="sidebar-item disabled" href="#">Delete Engageli Session - Multi-Dates (Coming Soon)</a></li>
+            <li><strong>Grading</strong></li>
+            <li><a class="sidebar-item" href="#default-grader">Temporary Zeros (This Course)</a></li>
+            <li><a class="sidebar-item" href="#multi-course-default-grader">Temporary Zeros (Multi-Course)</a></li>
+            <li><a class="sidebar-item" href="#rubric-matcher">Rubric Matcher</a></li>
 
-            <!-- Grades & Rubrics -->
-            <li><strong>Grades & Rubrics</strong></li>
-            <li><a class="sidebar-item disabled" href="#">Manage Rubrics (Coming Soon)</a></li>
-            <li><a class="sidebar-item disabled" href="#">Temporary Zeros - This Course (Coming Soon)</a></li>
-            <li><a class="sidebar-item disabled" href="#">Temporary Zeros - Multi-Course (Coming Soon)</a></li>
+            <li><strong>Course Management</strong></li>
+            <li><a class="sidebar-item" href="#nav-tab-manager">Navigation Tab Manager</a></li>
+            <li><a class="sidebar-item" href="#announcement-manager">Announcement Manager</a></li>
 
-            <!-- Admin & Other Tools -->
-            <li><strong>Admin & Other Tools</strong></li>
-            <li><a class="sidebar-item disabled" href="#">Announcement Manager (Coming Soon)</a></li>
-            <li><a class="sidebar-item disabled" href="#">Navigation Tab Manager (Coming Soon)</a></li>
+            <li><strong>Integrations</strong></li>
+            <li><a class="sidebar-item" href="#engageli">Engageli (This Course)</a></li>
+            <li><a class="sidebar-item" href="#multi-course-scheduler">Engageli (Multi-Course)</a></li>
+
+            
           </ul>
         </aside>
-
-        <article class="help-content" id="edit-assignments">
+        <article class="help-content guide" id="edit-dates">
           <h2 class="guide-title">How to Edit Assignments</h2>
           <div class="guide-sections">
             <section class="guide-step">
               <h4>Step 1</h4>
               <p>Choose your course and click <em>Load Items</em> to import all assignments, quizzes, and discussions.</p>
-              <img src="../Images/HELP_Edit_Assignment_Details/1.gif" alt="Step 1 GIF">
             </section>
             <section class="guide-step">
               <h4>Step 2</h4>
               <p>Select items using the checkboxes or click <em>Select All</em>. To start over, click <em>Cancel</em>.</p>
-              <img src="../Images/HELP_Edit_Assignment_Details/2.gif" alt="Step 2 GIF">
             </section>
             <section class="guide-step">
               <h4>Step 3</h4>
               <p>Use the <strong>Bulk Edit</strong> panel to set due dates, lock dates, attempts, submission types, or file restrictions.</p>
-              <img src="../Images/HELP_Edit_Assignment_Details/3.gif" alt="Step 3 GIF">
             </section>
             <section class="guide-step">
               <h4>Step 4</h4>
               <p>Click <strong>Apply Changes</strong> when done. Use <strong>Filter & Search</strong> to narrow by title or type.</p>
-              <img src="../Images/HELP_Edit_Assignment_Details/4.gif" alt="Step 4 GIF">
             </section>
             <div class="guide-tips">
               <h4>Tips</h4>
@@ -136,7 +133,7 @@
           </div>
         </article>
 
-        <article class="help-content" id="course-scheduler">
+        <article class="help-content guide" id="auto-scheduler">
           <h2 class="guide-title">How to Use Course Scheduler</h2>
           <div class="guide-sections">
             <section class="guide-step">
@@ -207,7 +204,7 @@
           </div>
         </article>
 
-        <article class="help-content" id="add-lock-dates">
+        <article class="help-content guide" id="add-lock-dates">
           <h2 class="guide-title">How to Use Add Lock Dates</h2>
           <div class="guide-sections">
             <section class="guide-step">
@@ -249,8 +246,347 @@
             </section>
           </div>
         </article>
+        <!-- Additional Guides (extracted and trimmed from componentsfilesfromtools) -->
+        <article class="help-content guide" id="default-grader">
+          <h2 class="guide-title">How to Apply Temporary Zeros</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <h4>Step 1: Set Date Filter</h4>
+              <p>Set a cutoff date or date range to find assignments, quizzes, and discussions due by that date.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 2: Load Assignments</h4>
+              <p>Click "Load Assignments" to find all items matching your date filter.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 3: Filter and Select</h4>
+              <p>Use the search and type filters to find specific items. Check the boxes for items where you want to apply temporary zeros.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 4: Apply Temporary Zeros</h4>
+              <p>Once you've selected items, click "Apply Temporary Zeros to Selected" to grade students with no submission.</p>
+            </section>
+            <div class="guide-tips">
+              <h4>Tip</h4>
+              <p>Click the "🎯 Quick Tour" button for an interactive walkthrough!</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="multi-course-default-grader">
+          <h2 class="guide-title">Temporary Zeros - Multi-Course</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <p>Apply temporary zeros across multiple courses using the same workflow as the single-course tool: set date filters, load assignments, select items, and apply.</p>
+            </section>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="nav-tab-manager">
+          <h2 class="guide-title">How to Manage Navigation Tabs</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <h4>Step 1: Select Courses</h4>
+              <p>Click on one or more courses in the list. Hold Ctrl/Cmd to select multiple courses at once.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 2: Choose a Navigation Tab</h4>
+              <p>Select the tab you want to modify from the dropdown (e.g., Assignments, Grades, Modules).</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 3: Apply Visibility</h4>
+              <p>Click "Make Visible in Selected Courses" to show the tab or "Hide in Selected Courses" to hide it.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 4: Review Results</h4>
+              <p>The results will appear below showing the status of your changes.</p>
+            </section>
+            <div class="guide-tips">
+              <h4>Tip</h4>
+              <p>Click the "🎯 Quick Tour" button for an interactive walkthrough!</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="announcement-manager">
+          <h2 class="guide-title">How to Manage Announcements</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <h4>Step 1: Load Courses</h4>
+              <p>Click "Load Courses" to fetch all your courses. Use search and omit filters to narrow down the list, then select the courses you want to work with.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 2: Choose an Action</h4>
+              <p>Click "Load Announcements" to view existing posts, or "Post Announcement..." to create a new one.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 3: For New Posts</h4>
+              <p>Enter a title, optionally set start/end dates, choose Basic or HTML editor, and compose your message.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 4: Post or Delete</h4>
+              <p>Post new announcements to selected courses or delete existing ones in bulk after filtering and selecting them.</p>
+            </section>
+            <div class="guide-tips">
+              <h4>Tip</h4>
+              <p>Click the "🎯 Quick Tour" button for an interactive walkthrough!</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="reset-calendar">
+          <h2 class="guide-title">How to Reset Calendar</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <h4>Step 1: Click Preview</h4>
+              <p>Click the Preview button to see all calendar events in your course.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 2: Filter and Select Events</h4>
+              <p>Use "Filter by Title" to find specific events. Use "Omit items with Title" to exclude certain events. Select the events you want to delete using the checkboxes.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 3: Click Confirm &amp; Delete</h4>
+              <p>Once you've selected all events to delete, click the "Confirm &amp; Delete" button.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 4: Confirm in Popup</h4>
+              <p>A confirmation popup will appear. Click "Yes, Delete Events" to complete the action. This action cannot be undone.</p>
+            </section>
+            <div class="guide-tips">
+              <h4>Tip</h4>
+              <p>Click the "🎯 Quick Tour" button for an interactive walkthrough!</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="reset-dates">
+          <h2 class="guide-title">How to Reset Dates</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <h4>Step 1: Click Preview</h4>
+              <p>Click the Preview button to see all graded items with dates in your course.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 2: Filter and Select Items</h4>
+              <p>Use "Filter by Title" to find specific items. Use "Omit items with Title" to exclude certain items. Select the items you want to reset dates for using the checkboxes.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 3: Click Confirm &amp; Reset</h4>
+              <p>Once you've selected all items to reset, click the "Confirm &amp; Reset" button.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 4: Confirm in Popup</h4>
+              <p>A confirmation popup will appear. Click "Yes, Reset Dates" to complete the action. This action cannot be undone.</p>
+            </section>
+            <div class="guide-tips">
+              <h4>Tip</h4>
+              <p>Click the "🎯 Quick Tour" button for an interactive walkthrough!</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="rubric-matcher">
+          <h2 class="guide-title">How to Match Rubrics</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <h4>Step 1: Load Assignments</h4>
+              <p>Click "Load Assignments" to find all graded items (assignments and discussions) in your course.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 2: Filter Results</h4>
+              <p>Use the search and omit fields to narrow down the list to the items you're interested in.</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 3: Review Matches</h4>
+              <p>The tool automatically suggests rubric matches based on similar naming patterns (e.g., "1.03" matches both a rubric and an assignment).</p>
+            </section>
+            <section class="guide-step">
+              <h4>Step 4: Apply Rubrics</h4>
+              <p>Review the suggested rubric associations and click "Apply Rubric Settings" to attach the rubrics to your assignments.</p>
+            </section>
+            <div class="guide-tips">
+              <h4>Tip</h4>
+              <p>Click the "🎯 Quick Tour" button for an interactive walkthrough!</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="engageli">
+          <h2 class="guide-title">Engageli Sessions — This Course</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <h4>What it does</h4>
+              <ul>
+                <li>Schedules Engageli sessions for this course as calendar events linked to Engageli module items.</li>
+              </ul>
+            </section>
+            <section class="guide-step">
+              <h4>How it works</h4>
+              <ul>
+                <li>Add Engageli link(s) to Course Materials and publish them.</li>
+                <li>Click Load Engageli Links from Course, complete the scheduling form.</li>
+                <li>Preview and Apply changes.</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="multi-course-scheduler">
+          <h2 class="guide-title">Engageli Sessions — Multi-Course</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <h4>What it does</h4>
+              <ul>
+                <li>Creates the same Engageli calendar event across multiple courses.</li>
+              </ul>
+            </section>
+            <section class="guide-step">
+              <h4>How it works</h4>
+              <ul>
+                <li>Complete event details (title, date/time, link).</li>
+                <li>Select courses via filters and checklist.</li>
+                <li>Create Event in Selected Courses and review results.</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="help-setup">
+          <h2 class="guide-title">Setup Guide</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <p>Pin the extension, configure Canvas Base URL and Personal Access Token, set default timezone, and export settings for backup. See Quickstart for details.</p>
+            </section>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="help-quickstart">
+          <h2 class="guide-title">TeacherPro for Canvas – Quick Start Guide</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <h4>1. Install and Set Up</h4>
+              <ul>
+                <li><strong>Add the extension:</strong> Install TeacherPro for Canvas from the Chrome Web Store.</li>
+                <li><strong>Pin it:</strong> Click the puzzle icon → Pin TeacherPro so it stays on your toolbar.</li>
+                <li><strong>Open Settings:</strong> Click the TeacherPro icon → Open Settings. Enter:</li>
+              </ul>
+              <ul style="margin-left: 20px;">
+                <li>Canvas Base URL (e.g., https://yourschool.instructure.com)</li>
+                <li>Personal Access Token (PAT)</li>
+              </ul>
+              <p>Click <strong>Save Settings</strong> to connect your Canvas account.</p>
+              <p><em>Tip:</em> If you just installed the extension, the Settings page will open automatically.</p>
+            </section>
+
+            <section class="guide-step">
+              <h4>2. Open the Dashboard</h4>
+              <p>Click the TeacherPro icon → Open Dashboard. This is your command center for all tools: scheduling, grading, Engageli sessions, and more.</p>
+              <p>The left sidebar is your navigation:</p>
+              <ul>
+                <li><strong>Scheduling Tools:</strong> Auto-Scheduler, Lock Dates, Edit Dates, Reset Tools</li>
+                <li><strong>Engageli Tools:</strong> Create, Delete, and Manage multi-course sessions</li>
+                <li><strong>Grades & Rubrics:</strong> Temporary Zeros, Rubric Matcher</li>
+                <li><strong>Admin Tools:</strong> Announcements, Navigation Tabs</li>
+              </ul>
+            </section>
+
+            <section class="guide-step">
+              <h4>3. Choose a Course</h4>
+              <ul>
+                <li>Click <strong>Select a Course</strong> (or “Change Course” if one is already set).</li>
+                <li>Choose your Canvas course from the list.</li>
+                <li>Add a short <strong>Course Prefix</strong> (e.g., ENG101) — this helps label calendar events.</li>
+              </ul>
+              <p>Once saved, your course name and prefix appear in the blue status bar at the top.</p>
+            </section>
+
+            <section class="guide-step">
+              <h4>4. Run a Tool</h4>
+              <p>Each tool works right inside the dashboard — no need to visit Canvas pages directly.</p>
+              <ul>
+                <li><strong>Auto Scheduler:</strong> Automatically schedule assignments by module or type.</li>
+                <li><strong>Perm Zero:</strong> Add lock dates for assignments to close after due dates.</li>
+                <li><strong>Edit Dates:</strong> Bulk-edit due dates, unlock/lock times, and publish status.</li>
+                <li><strong>Reset Tools:</strong> Clear out old assignment or calendar dates at term start.</li>
+                <li><strong>Rubric Matcher:</strong> Connect, rename, or import rubrics in bulk.</li>
+                <li><strong>Default Grader:</strong> Apply temporary zeros or default grades quickly.</li>
+                <li><strong>Engageli Scheduler:</strong> Create class sessions across multiple courses.</li>
+                <li><strong>Announcement Manager:</strong> Post or delete announcements across courses.</li>
+                <li><strong>Navigation Tabs:</strong> Hide or unhide course navigation links.</li>
+              </ul>
+              <p>When a tool is running, progress messages appear inside the panel. A small popup toast (bottom corner) confirms success or shows errors.</p>
+            </section>
+
+            <section class="guide-step">
+              <h4>5. Manage Your Subscription</h4>
+              <ul>
+                <li><strong>Free</strong> users can access Scheduling Tools.</li>
+                <li><strong>Premium</strong> unlocks everything else — grading automation, Engageli tools, rubrics, and admin utilities.</li>
+              </ul>
+              <p>Click ⭐ <strong>Manage Subscription</strong> in the sidebar to view pricing or upgrade.</p>
+              <p>If your trial is active, the remaining days show in the badge above the button.</p>
+            </section>
+
+            <section class="guide-step">
+              <h4>6. Feedback Library (Optional)</h4>
+              <p>In the popup menu, choose <strong>Open Feedback Library</strong> to manage stored feedback phrases and quick comments.</p>
+            </section>
+
+            <section class="guide-step">
+              <h4>7. Support &amp; Updates</h4>
+              <ul>
+                <li><strong>Report a Bug:</strong> From the popup → Report a Bug / Contact Support</li>
+                <li><strong>Website:</strong> teacherpro.app</li>
+                <li><strong>Email:</strong> teacherproforcanvas@gmail.com</li>
+              </ul>
+              <p>Updates appear automatically; you’ll be prompted to refresh Canvas pages after major updates.</p>
+            </section>
+
+            <section class="guide-step">
+              <h4>⚡ Pro Tips</h4>
+              <ul>
+                <li>You can safely switch between tools; your form data and presets are auto-saved.</li>
+                <li>If the dashboard looks small, adjust the <strong>UI Scale</strong> in Settings.</li>
+                <li>To retry a Canvas action, simply reopen the dashboard — it remembers your last tool.</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+
+        <!-- Stubs for remaining items -->
+        <article class="help-content guide" id="bulk-deleter"><h2 class="guide-title">Bulk Deleter</h2><p>Delete selected items across a course. Load items, filter, select, and delete.</p></article>
+        <article class="help-content guide" id="deleter"><h2 class="guide-title">Deleter</h2><p>Remove selected content quickly within a course. Use filters, select, and delete.</p></article>
+        <article class="help-content guide" id="backup-reminder"><h2 class="guide-title">Backup Reminder</h2><p>Export your Feedback Library (CSV) and Settings (JSON) to avoid data loss. Restore anytime from Settings.</p></article>
+        <article class="help-content guide" id="rubric-importer"><h2 class="guide-title">Rubric Importer</h2><p>Paste rubric data from a spreadsheet, preview, edit, and create a Canvas rubric.</p></article>
+        <article class="help-content guide" id="perm-zero"><h2 class="guide-title">Permission Zero</h2><p>Temporarily set zero-grade permissions per course; see in-app steps to apply and revert.</p></article>
+        <article class="help-content guide" id="perm-zero2"><h2 class="guide-title">Permission Zero 2</h2><p>Advanced zero application workflow; set criteria, preview, and apply in bulk.</p></article>
       </div>
     </section>
   </main>
+  <script>
+    // Simple client-side router to toggle visible guide by hash
+    (function () {
+      function showGuide(slug) {
+        const all = document.querySelectorAll('.help-content.guide');
+        all.forEach(el => el.classList.remove('active'));
+        const target = document.getElementById(slug);
+        (target || document.getElementById('auto-scheduler'))?.classList.add('active');
+        // active state in sidebar
+        document.querySelectorAll('.help-sidebar .sidebar-item').forEach(a => a.classList.remove('active'));
+        const link = document.querySelector(`.help-sidebar .sidebar-item[href="#${slug}"]`);
+        if (link) link.classList.add('active');
+      }
+      function init() {
+        const initial = (location.hash || '#auto-scheduler').replace('#','');
+        showGuide(initial);
+        window.addEventListener('hashchange', () => {
+          const slug = (location.hash || '').replace('#','');
+          showGuide(slug);
+        });
+      }
+      document.addEventListener('DOMContentLoaded', init);
+    })();
+  </script>
 </body>
 </html>
