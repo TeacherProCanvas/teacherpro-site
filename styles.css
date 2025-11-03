@@ -1216,3 +1216,23 @@ a:hover {
         color: #f3f4f6;
     }
 }
+/* Pricing feature icons: single source of truth */
+.pricing-features {
+  list-style: none;
+  padding-left: 0;
+}
+.pricing-features li {
+  position: relative;
+  padding-left: 28px;
+}
+.pricing-features li::before {
+  content: "\2713"; /* ? */
+  color: var(--success-green);
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+}
+.pricing-features li.unavailable::before {
+  content: "\2717"; /* ? */
+  color: #D32F2F;
+}
