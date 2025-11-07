@@ -37,6 +37,9 @@
     /* Single-guide view */
     .help-content.guide { display: none; }
     .help-content.guide.active { display: block; }
+    /* Tango embeds */
+    .tango-content img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); }
+    .tango-content hr { border: 0; border-top: 1px solid var(--border); }
   </style>
 </head>
 <body>
@@ -47,11 +50,11 @@
       <span class="logo-text">TeacherPro</span>
     </div>
     <nav class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#impact">Impact</a>
-      <a href="#security">Security</a>
-      <a href="#pricing">Pricing</a>
-      <a href="help/">Help</a>
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#impact">Impact</a>
+      <a href="../index.html#security">Security</a>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="/help/">Help</a>
     </nav>
     <div class="cta-buttons">
       <a href="https://chromewebstore.google.com/detail/teacherpro-for-canvas/klkacoocpahoomfjibbjljceokkkhpgl" class="btn btn-primary btn-sm">Install Extension</a>
@@ -91,10 +94,12 @@
             <li><a class="sidebar-item" href="#default-grader">Temporary Zeros (This Course)</a></li>
             <li><a class="sidebar-item" href="#multi-course-default-grader">Temporary Zeros (Multi-Course)</a></li>
             <li><a class="sidebar-item" href="#rubric-matcher">Rubric Matcher</a></li>
+            <li><a class="sidebar-item" href="#speedgrader-enhancements">SpeedGrader Enhancements</a></li>
 
             <li><strong>Course Management</strong></li>
             <li><a class="sidebar-item" href="#nav-tab-manager">Navigation Tab Manager</a></li>
             <li><a class="sidebar-item" href="#announcement-manager">Announcement Manager</a></li>
+            <li><a class="sidebar-item" href="#find-a-course">Find a Course</a></li>
 
             <li><strong>Integrations</strong></li>
             <li><a class="sidebar-item" href="#engageli">Engageli (This Course)</a></li>
@@ -412,7 +417,7 @@
         </article>
 
         <article class="help-content guide" id="engageli">
-          <h2 class="guide-title">Engageli Sessions â€” This Course</h2>
+          <h2 class="guide-title">Engageli Sessions &mdash; This Course</h2>
           <div class="guide-sections">
             <section class="guide-step">
               <h4>What it does</h4>
@@ -432,7 +437,7 @@
         </article>
 
         <article class="help-content guide" id="multi-course-scheduler">
-          <h2 class="guide-title">Engageli Sessions â€” Multi-Course</h2>
+          <h2 class="guide-title">Engageli Sessions &mdash; Multi-Course</h2>
           <div class="guide-sections">
             <section class="guide-step">
               <h4>What it does</h4>
@@ -461,14 +466,14 @@
         </article>
 
         <article class="help-content guide" id="help-quickstart">
-          <h2 class="guide-title">TeacherPro for Canvas â€“ Quick Start Guide</h2>
+          <h2 class="guide-title">TeacherPro for Canvas &ndash; Quick Start Guide</h2>
           <div class="guide-sections">
             <section class="guide-step">
               <h4>1. Install and Set Up</h4>
               <ul>
                 <li><strong>Add the extension:</strong> Install TeacherPro for Canvas from the Chrome Web Store.</li>
-                <li><strong>Pin it:</strong> Click the puzzle icon â†’ Pin TeacherPro so it stays on your toolbar.</li>
-                <li><strong>Open Settings:</strong> Click the TeacherPro icon â†’ Open Settings. Enter:</li>
+                <li><strong>Pin it:</strong> Click the puzzle icon &rarr; Pin TeacherPro so it stays on your toolbar.</li>
+                <li><strong>Open Settings:</strong> Click the TeacherPro icon &rarr; Open Settings. Enter:</li>
               </ul>
               <ul style="margin-left: 20px;">
                 <li>Canvas Base URL (e.g., https://yourschool.instructure.com)</li>
@@ -479,8 +484,13 @@
             </section>
 
             <section class="guide-step">
+              <h4>Create Your Canvas Personal Access Token (PAT)</h4>
+              <div class="tango-content" data-src="../Images/Setup_Canvas_PAT.html"></div>
+            </section>
+
+            <section class="guide-step">
               <h4>2. Open the Dashboard</h4>
-              <p>Click the TeacherPro icon â†’ Open Dashboard. This is your command center for all tools: scheduling, grading, Engageli sessions, and more.</p>
+              <p>Click the TeacherPro icon &rarr; Open Dashboard. This is your command center for all tools: scheduling, grading, Engageli sessions, and more.</p>
               <p>The left sidebar is your navigation:</p>
               <ul>
                 <li><strong>Scheduling Tools:</strong> Auto-Scheduler, Lock Dates, Edit Dates, Reset Tools</li>
@@ -493,16 +503,16 @@
             <section class="guide-step">
               <h4>3. Choose a Course</h4>
               <ul>
-                <li>Click <strong>Select a Course</strong> (or â€œChange Courseâ€ if one is already set).</li>
+                <li>Click <strong>Select a Course</strong> (or "Change Course" if one is already set).</li>
                 <li>Choose your Canvas course from the list.</li>
-                <li>Add a short <strong>Course Prefix</strong> (e.g., ENG101) â€” this helps label calendar events.</li>
+                <li>Add a short <strong>Course Prefix</strong> (e.g., ENG101) &mdash; this helps label calendar events.</li>
               </ul>
               <p>Once saved, your course name and prefix appear in the blue status bar at the top.</p>
             </section>
 
             <section class="guide-step">
               <h4>4. Run a Tool</h4>
-              <p>Each tool works right inside the dashboard â€” no need to visit Canvas pages directly.</p>
+              <p>Each tool works right inside the dashboard &mdash; no need to visit Canvas pages directly.</p>
               <ul>
                 <li><strong>Auto Scheduler:</strong> Automatically schedule assignments by module or type.</li>
                 <li><strong>Perm Zero:</strong> Add lock dates for assignments to close after due dates.</li>
@@ -521,9 +531,9 @@
               <h4>5. Manage Your Subscription</h4>
               <ul>
                 <li><strong>Free</strong> users can access Scheduling Tools.</li>
-                <li><strong>Premium</strong> unlocks everything else â€” grading automation, Engageli tools, rubrics, and admin utilities.</li>
+                <li><strong>Premium</strong> unlocks everything else &mdash; grading automation, Engageli tools, rubrics, and admin utilities.</li>
               </ul>
-              <p>Click â­ <strong>Manage Subscription</strong> in the sidebar to view pricing or upgrade.</p>
+              <p>Click &rarr; <strong>Manage Subscription</strong> in the sidebar to view pricing or upgrade.</p>
               <p>If your trial is active, the remaining days show in the badge above the button.</p>
             </section>
 
@@ -535,20 +545,38 @@
             <section class="guide-step">
               <h4>7. Support &amp; Updates</h4>
               <ul>
-                <li><strong>Report a Bug:</strong> From the popup â†’ Report a Bug / Contact Support</li>
+                <li><strong>Report a Bug:</strong> From the popup &rarr; Report a Bug / Contact Support</li>
                 <li><strong>Website:</strong> teacherpro.app</li>
                 <li><strong>Email:</strong> support@teacherpro.app</li>
               </ul>
-              <p>Updates appear automatically; youâ€™ll be prompted to refresh Canvas pages after major updates.</p>
+              <p>Updates appear automatically; you'll be prompted to refresh Canvas pages after major updates.</p>
             </section>
 
             <section class="guide-step">
-              <h4>âš¡ Pro Tips</h4>
+              <h4>Pro Tips</h4>
               <ul>
                 <li>You can safely switch between tools; your form data and presets are auto-saved.</li>
                 <li>If the dashboard looks small, adjust the <strong>UI Scale</strong> in Settings.</li>
-                <li>To retry a Canvas action, simply reopen the dashboard â€” it remembers your last tool.</li>
+                <li>To retry a Canvas action, simply reopen the dashboard &mdash; it remembers your last tool.</li>
               </ul>
+            </section>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="speedgrader-enhancements">
+          <h2 class="guide-title">SpeedGrader Enhancements</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <div class="tango-content" data-src="../Images/Grading_workflow.html"></div>
+            </section>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="find-a-course">
+          <h2 class="guide-title">Find a Course</h2>
+          <div class="guide-sections">
+            <section class="guide-step">
+              <div class="tango-content" data-src="../Images/Find_a_Course.html"></div>
             </section>
           </div>
         </article>
@@ -566,6 +594,18 @@
   <script>
     // Simple client-side router to toggle visible guide by hash
     (function () {
+      async function loadTangoEmbeds() {
+        const blocks = document.querySelectorAll('.tango-content[data-src]');
+        for (const el of blocks) {
+          const src = el.getAttribute('data-src');
+          try {
+            const res = await fetch(src);
+            if (!res.ok) continue;
+            const html = await res.text();
+            el.innerHTML = html;
+          } catch {}
+        }
+      }
       function showGuide(slug) {
         const all = document.querySelectorAll('.help-content.guide');
         all.forEach(el => el.classList.remove('active'));
@@ -583,6 +623,7 @@
           const slug = (location.hash || '').replace('#','');
           showGuide(slug);
         });
+        loadTangoEmbeds();
       }
       document.addEventListener('DOMContentLoaded', init);
     })();
@@ -601,8 +642,8 @@
       <div class="footer-section">
         <h4>Product</h4>
         <ul>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="../index.html#features">Features</a></li>
+          <li><a href="../index.html#pricing">Pricing</a></li>
           <li><a href="https://store.teacherpro.app/">Store</a></li>
         </ul>
       </div>
@@ -610,10 +651,10 @@
       <div class="footer-section">
         <h4>Company</h4>
         <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms-of-service.html">Terms of Service</a></li>
-          <li><a href="refund-policy.html">Refund Policy</a></li>
-          <li><a href="EULA.html">End User License Agreement (EULA)</a></li>
+          <li><a href="../privacy.html">Privacy Policy</a></li>
+          <li><a href="../terms-of-service.html">Terms of Service</a></li>
+          <li><a href="../refund-policy.html">Refund Policy</a></li>
+          <li><a href="../EULA.html">End User License Agreement (EULA)</a></li>
           <li><a href="https://store.teacherpro.app/billing">Manage Subscription</a></li>
           <li><a href="mailto:support@teacherpro.app">Support</a></li>
         </ul>
