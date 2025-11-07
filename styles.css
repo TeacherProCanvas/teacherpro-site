@@ -347,38 +347,55 @@ a:hover {
 }
 
 .hero-visual {
-    position: relative;
-    height: 400px;
-    animation: slideInRight 0.8s ease-out;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  animation: slideInRight 0.8s ease-out;
 }
 
 .floating-card {
-    position: absolute;
-    background: var(--dark-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: var(--shadow);
-    text-align: center;
-    animation: float 4s ease-in-out infinite;
+  background: var(--dark-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  animation: float 6s ease-in-out infinite;
+  width: 180px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-lg);
 }
 
 .floating-card span {
-    font-size: 2.5rem;
-    display: block;
-    margin-bottom: 12px;
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 12px;
 }
 
-.floating-card p {
-    margin: 8px 0;
-    font-size: 0.95rem;
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-.floating-card .time {
-    color: var(--primary-light);
-    font-weight: 600;
-}
+/* Optional staggered motion */
+.card-1 { animation-delay: 0s; }
+.card-2 { animation-delay: 0.4s; }
+.card-3 { animation-delay: 0.8s; }
+.card-4 { animation-delay: 1.2s; }
+.card-5 { animation-delay: 1.6s; }
 
+@media (max-width: 768px) {
+  .hero-visual {
+    flex-direction: column;
+  }
+}
 .card-1 {
     top: 20px;
     left: 0;
