@@ -396,7 +396,17 @@ a:hover {
     left: 40px;
     animation-delay: 2s;
 }
+.card-4 {
+    top: 200px;
+    right: 100px;
+    animation-delay: 3s;
+}
 
+.card-5 {
+    bottom: 60px;
+    right: 40px;
+    animation-delay: 4s;
+}
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
