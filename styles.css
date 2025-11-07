@@ -1,4 +1,4 @@
-/* ===== ROOT VARIABLES ===== */
+﻿/* ===== ROOT VARIABLES ===== */
 :root {
     --primary: #7E57C2;
     --primary-light: #7E57C2;
@@ -351,7 +351,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem; /* Increased to prevent visual overlap during float */
   margin-top: 2rem;
   animation: slideInRight 0.8s ease-out;
 }
@@ -366,6 +366,7 @@ a:hover {
   animation: float 6s ease-in-out infinite;
   width: 180px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
 }
 
 .floating-card:hover {
@@ -381,7 +382,7 @@ a:hover {
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-8px); }
 }
 
 /* Optional staggered motion */
@@ -423,10 +424,6 @@ a:hover {
     bottom: 60px;
     right: 40px;
     animation-delay: 4s;
-}
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
 }
 
 @keyframes slideInLeft {
@@ -1095,7 +1092,7 @@ a:hover {
 }
 
 .paywall-features li:before {
-    content: "✓";
+    content: "\2713";
     position: absolute;
     left: 0;
     color: var(--success);
@@ -1262,4 +1259,59 @@ a:hover {
 .pricing-features li.unavailable::before {
   content: "\2717"; /* ? */
   color: #D32F2F;
+}
+/* ===== COMPARE TABLE ===== */
+.compare {
+  padding: 100px 0;
+}
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--dark-bg);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+}
+.compare-table thead {
+  background: var(--primary-light);
+  color: white;
+}
+.compare-table th,
+.compare-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.compare-table th:first-child,
+.compare-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+.compare-table th:nth-child(2),
+.compare-table th:nth-child(3),
+.compare-table td:nth-child(2),
+.compare-table td:nth-child(3) {
+  text-align: center;
+  width: 140px;
+}
+.compare-table tbody tr:nth-child(even) {
+  background: var(--soft-gray);
+}
+.compare-table .yes {
+  color: var(--success-green);
+  font-weight: 700;
+}
+.compare-table .no {
+  color: #D32F2F;
+  font-weight: 700;
+}
+@media (prefers-color-scheme: dark) {
+  .compare-table {
+    background: #1f1f23;
+  }
+  .compare-table tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.03);
+  }
 }
