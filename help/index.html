@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -35,7 +35,7 @@
     .guide-tips { border-top: 1px solid var(--border); padding-top: 12px; }
     .guide-step video { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); margin-top: 8px; }
     /* Single-guide view */
-    .help-content.guide { display: none; }
+    .help-content.guide { display: none; scroll-margin-top: 120px; }
     .help-content.guide.active { display: block; }
     /* Tango embeds */
     .tango-content img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); }
@@ -121,11 +121,15 @@
     src="https://www.canva.com/design/DAG7Toqmbnc/IpRgtb0Qmj5zn7fJUKyFaQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
   </iframe>
 </div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG7Toqmbnc&#x2F;IpRgtb0Qmj5zn7fJUKyFaQ&#x2F;view?utm_content=DAG7Toqmbnc&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">
-         
-     </section>
-      </div>
-        </article>
+            <p>
+              <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG7Toqmbnc&#x2F;IpRgtb0Qmj5zn7fJUKyFaQ&#x2F;view?utm_content=DAG7Toqmbnc&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
+                target="_blank" rel="noopener">
+                Open this guide in Canva
+              </a>
+            </p>
+          </section>
+        </div>
+      </article>
 
         <article class="help-content guide" id="auto-scheduler">
   <h2 class="guide-title">How to Use Course Scheduler</h2>
@@ -380,7 +384,7 @@
         </article>
 
 <article class="help-content guide" id="help-quickstart">
-  <h2 class="guide-title"></h2>
+  <h2 class="guide-title">Getting Started / Setup Guide</h2>
 
   <div style="position: relative; width: 100%; height: 0; padding-top: 363.6896%;
     padding-bottom: 0; box-shadow: 0 2px 8px rgba(63,69,81,0.16); margin-top: 1.6em;
@@ -435,6 +439,7 @@
   <script>
     // Simple client-side router to toggle visible guide by hash
     (function () {
+      const defaultGuide = 'help-quickstart';
       async function loadTangoEmbeds() {
         const blocks = document.querySelectorAll('.tango-content[data-src]');
         for (const el of blocks) {
@@ -451,18 +456,19 @@
         const all = document.querySelectorAll('.help-content.guide');
         all.forEach(el => el.classList.remove('active'));
         const target = document.getElementById(slug);
-        (target || document.getElementById('auto-scheduler'))?.classList.add('active');
+        const finalSlug = target ? slug : defaultGuide;
+        document.getElementById(finalSlug)?.classList.add('active');
         // active state in sidebar
         document.querySelectorAll('.help-sidebar .sidebar-item').forEach(a => a.classList.remove('active'));
-        const link = document.querySelector(`.help-sidebar .sidebar-item[href="#${slug}"]`);
+        const link = document.querySelector(`.help-sidebar .sidebar-item[href="#${finalSlug}"]`);
         if (link) link.classList.add('active');
       }
       function init() {
-        const initial = (location.hash || '#auto-scheduler').replace('#','');
-        showGuide(initial);
+        const initial = (location.hash || `#${defaultGuide}`).replace('#','');
+        showGuide(initial || defaultGuide);
         window.addEventListener('hashchange', () => {
           const slug = (location.hash || '').replace('#','');
-          showGuide(slug);
+          showGuide(slug || defaultGuide);
         });
         loadTangoEmbeds();
       }
