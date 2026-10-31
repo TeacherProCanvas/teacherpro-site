@@ -40,6 +40,13 @@
     /* Tango embeds */
     .tango-content img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); }
     .tango-content hr { border: 0; border-top: 1px solid var(--border); }
+
+    .pdf-embed { width: 100%; height: 720px; border-radius: 8px; border: 1px solid var(--border); background: white; }
+    .iorad-embed { margin-top: 8px; }
+    .iorad-embed iframe { width: 100%; border-radius: 8px; }
+
+    .sidebar-subitem { padding-left: 28px; font-size: 0.92rem; color: var(--text-light); }
+    .sidebar-subitem.active { color: var(--primary-purple); }
   </style>
 </head>
 <body>
@@ -82,12 +89,20 @@
           <ul class="sidebar-list" id="help-sidebar-list">
             <li><strong>Getting Started</strong></li>
             <li><a class="sidebar-item" href="#help-quickstart">Setup Guide</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#help-quickstart-help">Help Page</a></li>
 
             <li><strong>Scheduling</strong></li>
             <li><a class="sidebar-item" href="#auto-scheduler">Course Scheduler</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#auto-scheduler-how">How to Use Course Scheduler</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#auto-scheduler-help">Help Page</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#auto-scheduler-walkthrough">Walkthrough</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#auto-scheduler-interactive">Interactive Tutorial</a></li>
             <li><a class="sidebar-item" href="#add-lock-dates">Add Lock Dates</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#add-lock-dates-help">Help Page</a></li>
             <li><a class="sidebar-item" href="#edit-dates">Edit Assignment Details</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#edit-dates-help">Help Page</a></li>
             <li><a class="sidebar-item" href="#reset-dates">Reset Assignment Dates</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#reset-dates-help">Help Page</a></li>
             <li><a class="sidebar-item" href="#reset-calendar">Reset Calendar Events</a></li>
 
             <li><strong>Grading & Rubrics</strong></li>
@@ -95,46 +110,65 @@
             <li><a class="sidebar-item" href="#multi-course-default-grader">Temporary Zeros (Multi-Course)</a></li>
             <li><a class="sidebar-item" href="#rubric-matcher">Rubric Matcher</a></li>
             <li><a class="sidebar-item" href="#speedgrader-enhancements">SpeedGrader Enhancements</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#speedgrader-walkthrough">Walkthrough</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#speedgrader-interactive">Interactive Tutorial</a></li>
+            <li><a class="sidebar-item" href="#bulk-exempt-overview">Bulk Excuse/Exempt Overview</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#bulk-exempt-overview-help">Help Page</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#bulk-exempt-overview-walkthrough">Walkthrough</a></li>
+            <li><a class="sidebar-item" href="#bulk-exempt-single">Bulk Excuse/Exempt (Single Student)</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#bulk-exempt-single-walkthrough">Walkthrough</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#bulk-exempt-single-interactive">Interactive Tutorial</a></li>
+            <li><a class="sidebar-item" href="#bulk-exempt-course">Bulk Excuse/Exempt (By Course)</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#bulk-exempt-course-walkthrough">Walkthrough</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#bulk-exempt-course-interactive">Interactive Tutorial</a></li>
 
             <li><strong>Course Management</strong></li>
             <li><a class="sidebar-item" href="#nav-tab-manager">Navigation Tab Manager</a></li>
             <li><a class="sidebar-item" href="#announcement-manager">Announcement Manager</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#announcement-walkthrough">Walkthrough</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#announcement-interactive">Interactive Tutorial</a></li>
             <li><a class="sidebar-item" href="#find-a-course">Find a Course</a></li>
+            <li><a class="sidebar-item" href="#find-student-widget">Find Student Widget</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#find-student-walkthrough">Walkthrough</a></li>
+            <li><a class="sidebar-item" href="#subsection-assignment-overrides">Subsection Assignment Overrides</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#subsection-overrides-help">Help Page</a></li>
+            <li><a class="sidebar-item" href="#adding-cgas">Adding CGAS to Subsections</a></li>
+            <li><a class="sidebar-item sidebar-subitem" href="#adding-cgas-help">Help Page</a></li>
 
-            <li><strong>Engageli Tools</strong></li>
-            <li><a class="sidebar-item" href="#engageli">Schedule Engageli (This Course)</a></li>
-            <li><a class="sidebar-item" href="#multi-course-scheduler">Schedule Engageli (Multi-Course)</a></li>
-            <li><a class="sidebar-item" href="#deleteengageli">Delete Engageli - Specific Date</a></li>
-            <li><a class="sidebar-item" href="#multi-engageli-deleter">Delete Engageli - Date Range</a></li>
 
             
           </ul>
         </aside>
         <article class="help-content guide" id="edit-dates">
-          <h2 class="guide-title">How to Edit Assignments</h2>
-          <div class="guide-sections">
-            <section class="guide-step">
-         <div style="position: relative; width: 100%; height: 0; padding-top: 569.4729%;
+  <h2 class="guide-title">How to Edit Assignments</h2>
+  <div class="guide-sections">
+    <section class="guide-step">
+      <div style="position: relative; width: 100%; height: 0; padding-top: 569.4729%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
  border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAG7Toqmbnc/IpRgtb0Qmj5zn7fJUKyFaQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-            <p>
-              <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG7Toqmbnc&#x2F;IpRgtb0Qmj5zn7fJUKyFaQ&#x2F;view?utm_content=DAG7Toqmbnc&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
-                target="_blank" rel="noopener">
-                Open this guide in Canva
-              </a>
-            </p>
-          </section>
-        </div>
-      </article>
+        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+          src="https://www.canva.com/design/DAG7Toqmbnc/IpRgtb0Qmj5zn7fJUKyFaQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+      </div>
+      <p>
+        <a href="https://www.canva.com/design/DAG7Toqmbnc/IpRgtb0Qmj5zn7fJUKyFaQ/view?utm_content=DAG7Toqmbnc&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
+          target="_blank" rel="noopener">
+          Open this guide in Canva
+        </a>
+      </p>
+    </section>
+    <section class="guide-step" id="auto-scheduler-help">
+      <h3>Help Page</h3>
+      <iframe class="pdf-embed" title="Edit Assignments - Help Page" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Edit%20Assignments%20-%20Help%20Page.pdf"></iframe>
+    </section>
+  </div>
+</article>
 
         <article class="help-content guide" id="auto-scheduler">
   <h2 class="guide-title">How to Use Course Scheduler</h2>
   <div class="guide-sections">
-      <section class="guide-step">
+    <section class="guide-step" id="auto-scheduler-how">
+      <h3>How to Use Course Scheduler</h3>
       <div style="position: relative; width: 100%; height: 0; padding-top: 481.6984%;
         padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
         border-radius: 8px; will-change: transform;">
@@ -142,8 +176,19 @@
           src="https://www.canva.com/design/DAG7OzJeqBM/CnmBQ5GNIADY4xN-PE-yNg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
         </iframe>
       </div>
-
-   </section>
+    </section>
+    <section class="guide-step" id="auto-scheduler-help">
+      <h3>Help Page</h3>
+      <iframe class="pdf-embed" title="Course Scheduler - Help Page" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Course%20Scheduler%20-%20%20Help%20Page.pdf"></iframe>
+    </section>
+    <section class="guide-step" id="auto-scheduler-walkthrough">
+      <h3>Walkthrough</h3>
+      <iframe class="pdf-embed" title="Course Scheduler - Walkthrough" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Course%20Scheduler%20-%20Walkthrough.pdf"></iframe>
+    </section>
+    <section class="guide-step" id="auto-scheduler-interactive">
+      <h3>Interactive Tutorial</h3>
+      <div class="iorad-embed"><div style="max-width: 100%; width: 800px; margin: 0 auto;"> <div style="display: none;"> <p style="display: none; text-align: center; margin-top: 10px;"> <i style="font-style: italic; font-weight: bold; color: #CCCCCC; font-size: 18px;">23 STEPS</i> </p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 1. The first step is to open <b style="font-weight:normal;color:#FF00D6">TeacherPro Dashboard </b> and select your course by clicking <b style="font-weight:normal;color:#FF00D6">Change Course.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=1&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 2. Use the filter at the top to narrow down your courses, then click on the course and click "<b style="font-weight:normal;color:#FF00D6">Save course</b>". </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=2&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 3. Enter a preset if available and skip to <span>Step 7</span>. Otherwise, enter the <b style="font-weight:normal;color:#FF00D6">Start Date</b> here. This is the first scheduled date, so move it forward if you do not want items scheduled on the first day.<b style="font-weight:normal;color:#FF00D6"></b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=3&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 4. Enter the <b style="font-weight:normal;color:#FF00D6">End Date</b>. This marks the last scheduled item. Adjust it if you want items to end before the official course end date, or extend it if the Final occurs later. Add holiday dates between the course end date and Final if needed. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=4&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 5. Enter any <b style="font-weight:normal;color:#FF00D6">holidays or blackout dates</b> you don't want items scheduled. If you have a gap between the Course End Date and the Final Date, include those dates here so items are not scheduled on those dates. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=5&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 6. If you want to save the dates for later, enter a Preset Name here and click "Save as New Preset." </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=6&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 7. When you are satisfied with your dates, click <b style="font-weight:normal;color:#FF00D6">Load Course Items</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=7&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 8. Large checkboxes represent Modules and small ones represent course items. Columns show whether each item is scheduled and published. Special scheduling is for Honors projects or assignments you want distributed evenly across the course. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=8&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 9. Click Expand or Collapse Module buttons for easier selection. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=9&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 10. Use the filters to find specific items in the course. You can also se the checkboxes to show or hide items by type.<br />Note: Summit Courses Quizzes are considered "Assignment" type. Use the Omit box "quiz" to hide these instead of the checkbox. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=10&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 11. Select items individually or use the buttons. The purple button selects visible items only, not the module. If a module is unpublished, its items are inaccessible even if published. The blue button selects the module and all visible items. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=11&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 12. Use the green buttons to either <b style="font-weight:normal;color:#FF00D6">Schedule Items</b> or <b style="font-weight:normal;color:#FF00D6">Publish Items</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=12&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 13. Use the Red buttons to either <b style="font-weight:normal;color:#FF00D6">Unschedule </b><b style="font-weight:normal;color:#FF00D6">Items </b>or <b style="font-weight:normal;color:#FF00D6">Unpublish Items.<br /></b>(NOTE: If you unpublish a module, ALL items in it will be inaccessible to students even if the items themselves are published!)<b style="font-weight:normal;color:#FF00D6"><br /></b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=13&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 14. Use <b style="font-weight:normal;color:#FF00D6">Clear filters </b>or<b style="font-weight:normal;color:#FF00D6"> Deselect All Visible </b>to reset your selections. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=14&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 15. If your course is designed for students to complete one module per day, use "<b style="font-weight:normal;color:#FF00D6">Preview: Schedule by Module" </b>otherwise, use "<b style="font-weight:normal;color:#FF00D6">Preview: Schedule by item."</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=15&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 16. If needed, use the "<b style="font-weight:normal;color:#FF00D6">Set Date</b>" in the preview table to adjust the schedule. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=16&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 17. You can also <b style="font-weight:normal;color:#FF00D6">drag and drop items</b> between days. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=17&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 18. Use the <b style="font-weight:normal;color:#FF00D6">arrow buttons</b> to arrange items in the desired order. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=18&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 19. Check that the course ends on the correct date. Adjust the Final by if needed. (Note: if a Schedule Day box is left empty, it disappears and cannot be restored unless you click Preview again. Adding extra days is not yet possible.) </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=19&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 20. When you are satisfied with your schedule, click <b style="font-weight:normal;color:#FF00D6">Apply Changes.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=20&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 21. Enter a course prefix for the calendar then click Save &amp; Apply. It should briefly identify the course, such as "MATH1" or "HST101". <br />With Schedule by Item, it shows “[prefix] - Due Today.” <br />With Schedule by Module, it shows “[prefix] - [module name].” </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=21&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 22. Type HST101 in <span><b style="font-weight:normal;color:#FF00D6">Calendar Entry Prefix</b></span> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=22&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 23. That's it. You're done. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2688286&step_number=23&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> </div> </div> <h3 style="display: none; font-size: 18px; margin-top: 89px; margin-bottom: 15px;"> Here's an interactive tutorial </h3> <p style="display: none;"> <a href="https://www.iorad.com/player/2688286/Course-Scheduler---Detailed-Tutorial">https://www.iorad.com/player/2688286/Course-Scheduler---Detailed-Tutorial</a> </p> <p class="skiptranslate" style="border: 0; min-width: 100%; margin-bottom: 0; height: 501px;"><iframe src="https://www.iorad.com/player/2688286/Course-Scheduler---Detailed-Tutorial?src=iframe&oembed=1" width="100%" height="500px" style="width: 100%; height: 500px; " referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen" allow="camera; microphone; clipboard-write;" sandbox="allow-scripts allow-forms allow-same-origin allow-presentation allow-downloads allow-modals allow-popups allow-popups-to-escape-sandbox allow-top-navigation allow-top-navigation-by-user-activation"></iframe></p></div>
+    </section>
   </div>
 </article>
 
@@ -153,17 +198,18 @@
 
   <div class="guide-sections">
     <section class="guide-step">
-
-    <div style="position: relative; width: 100%; height: 0; padding-top: 276.2079%;
+      <div style="position: relative; width: 100%; height: 0; padding-top: 276.2079%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
  border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAG7PRWQjzw/fThgn9tnTe5LAB7yx73j3w/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG7PRWQjzw&#x2F;fThgn9tnTe5LAB7yx73j3w&#x2F;view?utm_content=DAG7PRWQjzw&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">
-      </a>
-
+        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+          src="https://www.canva.com/design/DAG7PRWQjzw/fThgn9tnTe5LAB7yx73j3w/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+      </div>
+      <a href="https://www.canva.com/design/DAG7PRWQjzw/fThgn9tnTe5LAB7yx73j3w/view?utm_content=DAG7PRWQjzw&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener"></a>
+    </section>
+    <section class="guide-step" id="auto-scheduler-help">
+      <h3>Help Page</h3>
+      <iframe class="pdf-embed" title="Add Lock Dates - Help Page" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Add%20Lock%20Dates%20-%20Help%20Page.pdf"></iframe>
     </section>
   </div>
 </article>
@@ -231,30 +277,38 @@
         </article>
 
         <article class="help-content guide" id="announcement-manager">
-          <h2 class="guide-title">How to Manage Announcements</h2>
-          <div class="guide-sections">
-            <section class="guide-step">
-              <h4>Step 1: Load Courses</h4>
-              <p>Click "Load Courses" to fetch all your courses. Use search and omit filters to narrow down the list, then select the courses you want to work with.</p>
-            </section>
-            <section class="guide-step">
-              <h4>Step 2: Choose an Action</h4>
-              <p>Click "Load Announcements" to view existing posts, or "Post Announcement..." to create a new one.</p>
-            </section>
-            <section class="guide-step">
-              <h4>Step 3: For New Posts</h4>
-              <p>Enter a title, optionally set start/end dates, choose Basic or HTML editor, and compose your message.</p>
-            </section>
-            <section class="guide-step">
-              <h4>Step 4: Post or Delete</h4>
-              <p>Post new announcements to selected courses or delete existing ones in bulk after filtering and selecting them.</p>
-            </section>
-            <div class="guide-tips">
-              <h4>Tip</h4>
-              <p>Click the "Quick Tour" button for an interactive walkthrough!</p>
-            </div>
-          </div>
-        </article>
+  <h2 class="guide-title">How to Manage Announcements</h2>
+  <div class="guide-sections">
+    <section class="guide-step">
+      <h4>Step 1: Load Courses</h4>
+      <p>Click "Load Courses" to fetch all your courses. Use search and omit filters to narrow down the list, then select the courses you want to work with.</p>
+    </section>
+    <section class="guide-step">
+      <h4>Step 2: Choose an Action</h4>
+      <p>Click "Load Announcements" to view existing posts, or "Post Announcement..." to create a new one.</p>
+    </section>
+    <section class="guide-step">
+      <h4>Step 3: For New Posts</h4>
+      <p>Enter a title, optionally set start/end dates, choose Basic or HTML editor, and compose your message.</p>
+    </section>
+    <section class="guide-step">
+      <h4>Step 4: Post or Delete</h4>
+      <p>Post new announcements to selected courses or delete existing ones in bulk after filtering and selecting them.</p>
+    </section>
+    <section class="guide-step" id="auto-scheduler-walkthrough">
+      <h3>Walkthrough</h3>
+      <iframe class="pdf-embed" title="Announcement Manager - Walkthrough" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Announcement%20Manager%20-%20Walkthrough.pdf"></iframe>
+    </section>
+    <section class="guide-step" id="auto-scheduler-interactive">
+      <h3>Interactive Tutorial</h3>
+      <div class="iorad-embed"><div style="max-width: 100%; width: 800px; margin: 0 auto;"> <div style="display: none;"> <p style="display: none; text-align: center; margin-top: 10px;"> <i style="font-style: italic; font-weight: bold; color: #CCCCCC; font-size: 18px;">21 STEPS</i> </p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 1. The first step is to open <b style="font-weight:normal;color:#9A04F7">TeacherPro Dashboard - Google Chrome</b> and click <b style="font-weight:normal;color:#9A04F7">FIND A TOOL</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=1&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 2. Type "Announcements" in <span><b style="font-weight:normal;color:#9A04F7">FIND A TOOL</b></span> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=2&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 3. Click <b style="font-weight:normal;color:#9A04F7">Announcement Manager</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=3&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 4. Click <b style="font-weight:normal;color:#9A04F7">Load Courses</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=4&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 5. Use the Search Bar to filter your courses. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=5&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 6. Click <b style="font-weight:normal;color:#9A04F7">Select All Visible</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=6&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 7. If you want to edit or delete existing announcements, click <b style="font-weight:normal;color:#9A04F7">Load Announcements</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=7&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 8. Use the search bar to locate the announcement(s) you want to edit or delete. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=8&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 9. If you want to post one announcement to your selected courses, click <b style="font-weight:normal;color:#9A04F7">Post Single Announcement.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=9&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 10. Type in your announcement details in <span><b style="font-weight:normal;color:#9A04F7">Announcement title</b></span> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=10&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 11. If you want to use an HTML code, use the toggle <b style="font-weight:normal;color:#9A04F7">here.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=11&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 12. Paste in your HTML code. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=12&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 13. Click <b style="font-weight:normal;color:#9A04F7">Post to Selected Course</b>. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=13&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 14. If you want to post multiple announcements to your selected courses, click <b style="font-weight:normal;color:#9A04F7">Post Multiple Announcements.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=14&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 15. Click <b style="font-weight:normal;color:#9A04F7">Post Multiple Announcements</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=15&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 16. Copy the template <b style="font-weight:normal;color:#9A04F7">here</b>, paste into Excel and add your title, and html code. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=16&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 17. Then, paste your entire completed table <b style="font-weight:normal;color:#9A04F7">here</b>. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=17&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 18. Click <b style="font-weight:normal;color:#9A04F7">Parse Table</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=18&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 19. Scroll down and Click <b style="font-weight:normal;color:#9A04F7">Preview.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=19&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 20. The HTML code will load and display your announcement. Click <b style="font-weight:normal;color:#9A04F7">"Post Parsed Rows to Selected Courses" </b>to post your announcements to<b style="font-weight:normal;color:#9A04F7"> all selected courses.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=20&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 21. That's it. You're done. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686143&step_number=21&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> </div> </div> <h3 style="display: none; font-size: 18px; margin-top: 89px; margin-bottom: 15px;"> Here's an interactive tutorial </h3> <p style="display: none;"> <a href="https://www.iorad.com/player/2686143/Announcement-Manager">https://www.iorad.com/player/2686143/Announcement-Manager</a> </p> <p class="skiptranslate" style="border: 0; min-width: 100%; margin-bottom: 0; height: 501px;"><iframe src="https://www.iorad.com/player/2686143/Announcement-Manager?src=iframe&oembed=1" width="100%" height="500px" style="width: 100%; height: 500px; " referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen" allow="camera; microphone; clipboard-write;" sandbox="allow-scripts allow-forms allow-same-origin allow-presentation allow-downloads allow-modals allow-popups allow-popups-to-escape-sandbox allow-top-navigation allow-top-navigation-by-user-activation"></iframe></p></div>
+    </section>
+    <div class="guide-tips">
+      <h4>Tip</h4>
+      <p>Click the "Quick Tour" button for an interactive walkthrough!</p>
+    </div>
+  </div>
+</article>
 
         <article class="help-content guide" id="reset-calendar">
           <h2 class="guide-title">How to Reset Calendar</h2>
@@ -283,30 +337,34 @@
         </article>
 
         <article class="help-content guide" id="reset-dates">
-          <h2 class="guide-title">How to Reset Dates</h2>
-          <div class="guide-sections">
-            <section class="guide-step">
-              <h4>Step 1: Click Preview</h4>
-              <p>Click the Preview button to see all graded items with dates in your course.</p>
-            </section>
-            <section class="guide-step">
-              <h4>Step 2: Filter and Select Items</h4>
-              <p>Use "Filter by Title" to find specific items. Use "Omit items with Title" to exclude certain items. Select the items you want to reset dates for using the checkboxes.</p>
-            </section>
-            <section class="guide-step">
-              <h4>Step 3: Click Confirm &amp; Reset</h4>
-              <p>Once you've selected all items to reset, click the "Confirm &amp; Reset" button.</p>
-            </section>
-            <section class="guide-step">
-              <h4>Step 4: Confirm in Popup</h4>
-              <p>A confirmation popup will appear. Click "Yes, Reset Dates" to complete the action. This action cannot be undone.</p>
-            </section>
-            <div class="guide-tips">
-              <h4>Tip</h4>
-              <p>Click the "Quick Tour" button for an interactive walkthrough!</p>
-            </div>
-          </div>
-        </article>
+  <h2 class="guide-title">How to Reset Dates</h2>
+  <div class="guide-sections">
+    <section class="guide-step">
+      <h4>Step 1: Click Preview</h4>
+      <p>Click the Preview button to see all graded items with dates in your course.</p>
+    </section>
+    <section class="guide-step">
+      <h4>Step 2: Filter and Select Items</h4>
+      <p>Use "Filter by Title" to find specific items. Use "Omit items with Title" to exclude certain items. Select the items you want to reset dates for using the checkboxes.</p>
+    </section>
+    <section class="guide-step">
+      <h4>Step 3: Click Confirm &amp; Reset</h4>
+      <p>Once you've selected all items to reset, click the "Confirm &amp; Reset" button.</p>
+    </section>
+    <section class="guide-step">
+      <h4>Step 4: Confirm in Popup</h4>
+      <p>A confirmation popup will appear. Click "Yes, Reset Dates" to complete the action. This action cannot be undone.</p>
+    </section>
+    <section class="guide-step" id="auto-scheduler-help">
+      <h3>Help Page</h3>
+      <iframe class="pdf-embed" title="Reset Assignment Dates - Help Page" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Reset%20Assignment%20Dates%20-%20Help%20Page.pdf"></iframe>
+    </section>
+    <div class="guide-tips">
+      <h4>Tip</h4>
+      <p>Click the "Quick Tour" button for an interactive walkthrough!</p>
+    </div>
+  </div>
+</article>
 
         <article class="help-content guide" id="rubric-matcher">
           <h2 class="guide-title">How to Match Rubrics</h2>
@@ -334,45 +392,9 @@
           </div>
         </article>
 
-        <article class="help-content guide" id="engageli">
-          <h2 class="guide-title">Engageli Sessions &mdash; This Course</h2>
-          <div class="guide-sections">
-            <section class="guide-step">
-              <h4>What it does</h4>
-              <ul>
-                <li>Schedules Engageli sessions for this course as calendar events linked to Engageli module items.</li>
-              </ul>
-            </section>
-            <section class="guide-step">
-              <h4>How it works</h4>
-              <ul>
-                <li>Add Engageli link(s) to Course Materials and publish them.</li>
-                <li>Click Load Engageli Links from Course, complete the scheduling form.</li>
-                <li>Preview and Apply changes.</li>
-              </ul>
-            </section>
-          </div>
-        </article>
+        
 
-        <article class="help-content guide" id="multi-course-scheduler">
-          <h2 class="guide-title">Engageli Sessions &mdash; Multi-Course</h2>
-          <div class="guide-sections">
-            <section class="guide-step">
-              <h4>What it does</h4>
-              <ul>
-                <li>Creates the same Engageli calendar event across multiple courses.</li>
-              </ul>
-            </section>
-            <section class="guide-step">
-              <h4>How it works</h4>
-              <ul>
-                <li>Complete event details (title, date/time, link).</li>
-                <li>Select courses via filters and checklist.</li>
-                <li>Create Event in Selected Courses and review results.</li>
-              </ul>
-            </section>
-          </div>
-        </article>
+        
 
         <article class="help-content guide" id="help-setup">
           <h2 class="guide-title">Setup Guide</h2>
@@ -405,17 +427,32 @@
       Open this guide in Canva
     </a>
   </p>
+
+  <div class="guide-sections">
+    <section class="guide-step" id="auto-scheduler-help">
+      <h3>Help Page</h3>
+      <iframe class="pdf-embed" title="Setup Guide - Help Page" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Setup%20Guide%20-%20Help%20Page.pdf"></iframe>
+    </section>
+  </div>
 </article>
 
 
         <article class="help-content guide" id="speedgrader-enhancements">
-          <h2 class="guide-title">SpeedGrader Enhancements</h2>
-          <div class="guide-sections">
-            <section class="guide-step">
-              <div class="tango-content" data-src="../Images/Grading_workflow.html"></div>
-            </section>
-          </div>
-        </article>
+  <h2 class="guide-title">SpeedGrader Enhancements</h2>
+  <div class="guide-sections">
+    <section class="guide-step">
+      <div class="tango-content" data-src="../Images/Grading_workflow.html"></div>
+    </section>
+    <section class="guide-step" id="auto-scheduler-walkthrough">
+      <h3>Walkthrough</h3>
+      <iframe class="pdf-embed" title="Speedgrader Tools - Walkthrough" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Speedgrader%20Tools%20-%20Walkthrough.pdf"></iframe>
+    </section>
+    <section class="guide-step" id="auto-scheduler-interactive">
+      <h3>Interactive Tutorial</h3>
+      <div class="iorad-embed"><div style="max-width: 100%; width: 800px; margin: 0 auto;"> <div style="display: none;"> <p style="display: none; text-align: center; margin-top: 10px;"> <i style="font-style: italic; font-weight: bold; color: #CCCCCC; font-size: 18px;">14 STEPS</i> </p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 1. From your Canvas Dashboard, click the plus sign on the grading widget, then click <b style="font-weight:normal;color:#FF00D6">Start grading</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686322&step_number=1&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 2. <b style="font-weight:normal;color:#FF00D6"></b>OPTIONAL: If you use rubrics, you can click <b style="font-weight:normal;color:#FF00D6">Max </b>to set all rubric criteria to full points. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686322&step_number=2&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 3. OPTIONAL: If you have added a signature in Settings, you can click <b style="font-weight:normal;color:#FF00D6">Add Signature </b>to insert your signature at the bottom of the comment box. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686322&step_number=3&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 4. OPTIONAL: Does your student use a preferred name? You can click <b style="font-weight:normal;color:#FF00D6">Set Nickname</b> to have Canvas use the nickname when inserting saved feedback or when using "Add Greeting". </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686322&step_number=4&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 5. OPTIONAL: Want to personalize your feedback? Click <b style="font-weight:normal;color:#FF00D6">Add Greeting</b> to insert<b style="font-weight:normal;color:#FF00D6"> </b>"[Greetings] [Student's name/nickname].<br />You can customize your greeting in settings, for example: "Hola" or "Hello". </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686322&step_number=5&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 6. Optional: Want to save commonly used feedback for next time? <br />Click <b style="font-weight:normal;color:#FF00D6">Save to Library!</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686322&step_number=6&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 7. To save your feedback, enter a "<b style="font-weight:normal;color:#FF00D6">Tag</b>" in the box. For example: "blank". </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686322&step_number=7&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 8. Want to save this feedback for other assignments in the same course? Click <b style="font-weight:normal;color:#FF00D6">Show.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686322&step_number=8&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 9. Then, click <b style="font-weight:normal;color:#FF00D6">Get Assignments.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686322&step_number=9&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 10. Choose your assignments from the list You can use the filter boxes to refine your search. Then, click <b style="font-weight:normal;color:#FF00D6">Save</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686322&step_number=10&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 11. To use your saved feedback, refresh the page, and your "Blank" button will appear here. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686322&step_number=11&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 12. When you have finished grading this assignment, you can click <b style="font-weight:normal;color:#FF00D6">Next Ungraded </b>to go to the next assignment. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686322&step_number=12&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 13. If you want to see the list of ungraded items, you can click the <b style="font-weight:normal;color:#FF00D6">Ungraded list</b>, or, if you only want to grade the same assignment you can click the <b style="font-weight:normal;color:#FF00D6">Lock </b>icon stay on the current assignment. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686322&step_number=13&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 14. That's it. You're done. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686322&step_number=14&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> </div> </div> <h3 style="display: none; font-size: 18px; margin-top: 89px; margin-bottom: 15px;"> Here's an interactive tutorial </h3> <p style="display: none;"> <a href="https://www.iorad.com/player/2686322/Speedgrader-Tools">https://www.iorad.com/player/2686322/Speedgrader-Tools</a> </p> <p class="skiptranslate" style="border: 0; min-width: 100%; margin-bottom: 0; height: 501px;"><iframe src="https://www.iorad.com/player/2686322/Speedgrader-Tools?src=iframe&oembed=1" width="100%" height="500px" style="width: 100%; height: 500px; " referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen" allow="camera; microphone; clipboard-write;" sandbox="allow-scripts allow-forms allow-same-origin allow-presentation allow-downloads allow-modals allow-popups allow-popups-to-escape-sandbox allow-top-navigation allow-top-navigation-by-user-activation"></iframe></p></div>
+    </section>
+  </div>
+</article>
 
         <article class="help-content guide" id="find-a-course">
           <h2 class="guide-title">Find a Course</h2>
@@ -426,6 +463,78 @@
           </div>
         </article>
 
+        
+        <article class="help-content guide" id="bulk-exempt-overview">
+          <h2 class="guide-title">Bulk Excuse/Exempt - Overview</h2>
+          <div class="guide-sections">
+            <section class="guide-step" id="bulk-exempt-overview-help">
+              <h3>Help Page</h3>
+              <iframe class="pdf-embed" title="Bulk Excuse Exempt - Help Page" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Bulk%20Excuse%20Exempt%20-%20Help%20Page.pdf"></iframe>
+            </section>
+            <section class="guide-step" id="bulk-exempt-overview-walkthrough">
+              <h3>Walkthrough</h3>
+              <iframe class="pdf-embed" title="Bulk Excuse Exempt - Walkthrough" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Bulk%20Excuse%20Exempt%20-%20Walkthrough.pdf"></iframe>
+            </section>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="bulk-exempt-single">
+          <h2 class="guide-title">Widget - Bulk Exempt or Excuse (Single Student)</h2>
+          <div class="guide-sections">
+            <section class="guide-step" id="bulk-exempt-single-walkthrough">
+              <h3>Walkthrough</h3>
+              <iframe class="pdf-embed" title="Widget - Bulk Exempt or Excuse Single Student - Walkthrough" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Widget%20-%20Bulk%20Exempt%20or%20Excuse%20Singe%20Student%20-%20Walkthrough.pdf"></iframe>
+            </section>
+            <section class="guide-step" id="bulk-exempt-single-interactive">
+              <h3>Interactive Tutorial</h3>
+              <div class="iorad-embed"><div style="max-width: 100%; width: 800px; margin: 0 auto;"> <div style="display: none;"> <p style="display: none; text-align: center; margin-top: 10px;"> <i style="font-style: italic; font-weight: bold; color: #CCCCCC; font-size: 18px;">9 STEPS</i> </p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 1. The first step is to open your Canvas <b style="font-weight:normal;color:#9A04F7">Dashboard - </b> and click <b style="font-weight:normal;color:#9A04F7">+ on the New Enrollments Widget.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686230&step_number=1&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 2. Click <b style="font-weight:normal;color:#9A04F7">Manage New Enrollments</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686230&step_number=2&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 3. If you want to check to see if a student has already been exempted, you can click the <b style="font-weight:normal;color:#9A04F7">student's name</b> to to be taken to that student's gradebook. Otherwise, go to the next step. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686230&step_number=3&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 4. To exempt/excuse a SINGLE student, click the <b style="font-weight:normal;color:#9A04F7">date.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686230&step_number=4&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 5. The student will automatically be selected from the course list. The date will also be auto-filled. You only need to click <b style="font-weight:normal;color:#9A04F7">Load Assignments</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686230&step_number=5&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 6. Click <b style="font-weight:normal;color:#9A04F7">Select All </b>to select the assignments due on or before the detected date. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686230&step_number=6&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 7. Click <b style="font-weight:normal;color:#9A04F7">Apply Exemptions</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686230&step_number=7&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 8. Verify that the student and exemptions are correct, then click <b style="font-weight:normal;color:#9A04F7">Apply.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686230&step_number=8&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 9. <span>All done!</span> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686230&step_number=9&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> </div> </div> <h3 style="display: none; font-size: 18px; margin-top: 89px; margin-bottom: 15px;"> Here's an interactive tutorial </h3> <p style="display: none;"> <a href="https://www.iorad.com/player/2686230/Widget---Bulk-Exempt-or-Excuse-Singe-Student">https://www.iorad.com/player/2686230/Widget---Bulk-Exempt-or-Excuse-Singe-Student</a> </p> <p class="skiptranslate" style="border: 0; min-width: 100%; margin-bottom: 0; height: 501px;"><iframe src="https://www.iorad.com/player/2686230/Widget---Bulk-Exempt-or-Excuse-Singe-Student?src=iframe&oembed=1" width="100%" height="500px" style="width: 100%; height: 500px; " referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen" allow="camera; microphone; clipboard-write;" sandbox="allow-scripts allow-forms allow-same-origin allow-presentation allow-downloads allow-modals allow-popups allow-popups-to-escape-sandbox allow-top-navigation allow-top-navigation-by-user-activation"></iframe></p></div>
+            </section>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="bulk-exempt-course">
+          <h2 class="guide-title">Widget - Bulk Exempt or Excuse (By Course)</h2>
+          <div class="guide-sections">
+            <section class="guide-step" id="bulk-exempt-course-walkthrough">
+              <h3>Walkthrough</h3>
+              <iframe class="pdf-embed" title="Widget - Bulk Exempt or Excuse By Course - Walkthrough" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Widget%20-%20Bulk%20Exempt%20or%20Excuse%20By%20Course%20-%20Walkthrough.pdf"></iframe>
+            </section>
+            <section class="guide-step" id="bulk-exempt-course-interactive">
+              <h3>Interactive Tutorial</h3>
+              <div class="iorad-embed"><div style="max-width: 100%; width: 800px; margin: 0 auto;"> <div style="display: none;"> <p style="display: none; text-align: center; margin-top: 10px;"> <i style="font-style: italic; font-weight: bold; color: #CCCCCC; font-size: 18px;">12 STEPS</i> </p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 1. The first step is to open your Canvas <b style="font-weight:normal;color:#9A04F7">Dashboard - </b> and click <b style="font-weight:normal;color:#9A04F7">+ on the New Enrollments Widget.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686281&step_number=1&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 2. Click <b style="font-weight:normal;color:#9A04F7">Manage New Enrollments</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686281&step_number=2&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 3. Scroll down to the "Enrollment history by course" section. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686281&step_number=3&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 4. Click the "New Only" box. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686281&step_number=4&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 5. Optional - Click the <b style="font-weight:normal;color:#9A04F7">New </b>column to sort. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686281&step_number=5&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 6. To exempt or excuse ALL new students, click <b style="font-weight:normal;color:#9A04F7">Exempt NEW students.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686281&step_number=6&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 7. The students will automatically be selected. </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686281&step_number=7&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 8. The date will be auto-filled. You only need to click <b style="font-weight:normal;color:#9A04F7">Load Assignments.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686281&step_number=8&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 9. Click <b style="font-weight:normal;color:#9A04F7">Select All</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686281&step_number=9&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 10. Click <b style="font-weight:normal;color:#9A04F7">Apply Exemptions</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686281&step_number=10&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 11. Verify the exemptions and students, then click <b style="font-weight:normal;color:#9A04F7">Apply.</b> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686281&step_number=11&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> <p style='font-size: 15px; line-height: 136%; margin-top: 59px; margin-bottom: 51px;'> 12. <span>Tutorial Finished</span> </p> <p style="text-align: center;"><img src="https://www.iorad.com/api/tutorial/stepScreenshot?tutorial_id=2686281&step_number=12&width=800&height=600&mobile_width=450&mobile_height=400&apply_resize=false&min_zoom=0.5" style="max-width: 100%;max-height: 100%;border: none;" alt="" /></p> </div> </div> <h3 style="display: none; font-size: 18px; margin-top: 89px; margin-bottom: 15px;"> Here's an interactive tutorial </h3> <p style="display: none;"> <a href="https://www.iorad.com/player/2686281/Widget---Bulk-Exempt-or-Excuse-By-Course">https://www.iorad.com/player/2686281/Widget---Bulk-Exempt-or-Excuse-By-Course</a> </p> <p class="skiptranslate" style="border: 0; min-width: 100%; margin-bottom: 0; height: 501px;"><iframe src="https://www.iorad.com/player/2686281/Widget---Bulk-Exempt-or-Excuse-By-Course?src=iframe&oembed=1" width="100%" height="500px" style="width: 100%; height: 500px; " referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen" allow="camera; microphone; clipboard-write;" sandbox="allow-scripts allow-forms allow-same-origin allow-presentation allow-downloads allow-modals allow-popups allow-popups-to-escape-sandbox allow-top-navigation allow-top-navigation-by-user-activation"></iframe></p></div>
+            </section>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="find-student-widget">
+          <h2 class="guide-title">Find Student Widget</h2>
+          <div class="guide-sections">
+            <section class="guide-step" id="find-student-walkthrough">
+              <h3>Walkthrough</h3>
+              <iframe class="pdf-embed" title="Find Student Widget - Walkthrough" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Find%20Student%20Widget%20-%20Walkthrough.pdf"></iframe>
+            </section>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="subsection-assignment-overrides">
+          <h2 class="guide-title">Subsection Assignment Overrides</h2>
+          <div class="guide-sections">
+            <section class="guide-step" id="subsection-overrides-help">
+              <h3>Help Page</h3>
+              <iframe class="pdf-embed" title="Subsection Assignment Overrides - Help Page" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Subsection%20Assignment%20Overrides%20-%20Help%20Page.pdf"></iframe>
+            </section>
+          </div>
+        </article>
+
+        <article class="help-content guide" id="adding-cgas">
+          <h2 class="guide-title">Adding CGAS to Subsections</h2>
+          <div class="guide-sections">
+            <section class="guide-step" id="adding-cgas-help">
+              <h3>Help Page</h3>
+              <iframe class="pdf-embed" title="Adding CGAS to Subsections - Help Page" loading="lazy" src="../TeacherPro_Canvas_Course_Help/Adding%20CGAS%20to%20Subsections%20-%20Help%20Page.pdf"></iframe>
+            </section>
+          </div>
+        </article>
         <!-- Stubs for remaining items -->
         <article class="help-content guide" id="bulk-deleter"><h2 class="guide-title">Bulk Deleter</h2><p>Delete selected items across a course. Load items, filter, select, and delete.</p></article>
         <article class="help-content guide" id="deleter"><h2 class="guide-title">Deleter</h2><p>Remove selected content quickly within a course. Use filters, select, and delete.</p></article>
@@ -455,13 +564,28 @@
       function showGuide(slug) {
         const all = document.querySelectorAll('.help-content.guide');
         all.forEach(el => el.classList.remove('active'));
-        const target = document.getElementById(slug);
-        const finalSlug = target ? slug : defaultGuide;
+        const target = slug ? document.getElementById(slug) : null;
+        let finalSlug = defaultGuide;
+        let guideEl = null;
+        if (target) {
+          if (target.classList.contains('help-content') && target.classList.contains('guide')) {
+            guideEl = target;
+            finalSlug = slug;
+          } else {
+            guideEl = target.closest('.help-content.guide');
+            if (guideEl && guideEl.id) finalSlug = guideEl.id;
+          }
+        }
         document.getElementById(finalSlug)?.classList.add('active');
         // active state in sidebar
         document.querySelectorAll('.help-sidebar .sidebar-item').forEach(a => a.classList.remove('active'));
-        const link = document.querySelector(`.help-sidebar .sidebar-item[href="#${finalSlug}"]`);
-        if (link) link.classList.add('active');
+        const exactLink = slug ? document.querySelector(`.help-sidebar .sidebar-item[href="#${slug}"]`) : null;
+        if (exactLink) exactLink.classList.add('active');
+        const guideLink = document.querySelector(`.help-sidebar .sidebar-item[href="#${finalSlug}"]`);
+        if (guideLink) guideLink.classList.add('active');
+        if (target && guideEl && target !== guideEl) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
       function init() {
         const initial = (location.hash || `#${defaultGuide}`).replace('#','');

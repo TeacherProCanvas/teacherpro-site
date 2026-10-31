@@ -1315,3 +1315,15 @@ a:hover {
     background: rgba(255,255,255,0.03);
   }
 }
+
+/* Platform names and checkout pricing replace numeric marketing claims. */
+.platform-overview .stat-number { font-size: clamp(1.25rem, 3vw, 2rem); overflow-wrap: anywhere; }
+.plan-price-link { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+
+/* Canvas tool directory */
+.canvas-tool-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.canvas-tool-directory .feature-card { min-width: 0; }
+.canvas-tool-directory dl { margin-bottom: 0; }
+.canvas-tool-directory dt { font-weight: 700; margin-top: 1.25rem; line-height: 1.5; }
+.canvas-tool-directory dd { margin: .35rem 0 0; line-height: 1.65; overflow-wrap: anywhere; }
+@media (max-width: 768px) { .canvas-tool-directory { grid-template-columns: 1fr; } }
